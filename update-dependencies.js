@@ -10,7 +10,15 @@ const dependencies = Object.keys(packageJson.dependencies || {});
 const devDependencies = Object.keys(packageJson.devDependencies || {});
 
 // Lista de dependencias a ignorar (puedes agregar las que desees)
-const ignoreDependencies = ["autoprefixer", "history", "node-sass"];
+const ignoreDependencies = [
+    "autoprefixer", "history", "node-sass",
+    "@babel/core",
+    "@babel/plugin-proposal-class-properties",
+    "@babel/polyfill",
+    "@babel/preset-env",
+    "@babel/preset-react",
+    "autoprefixer",
+];
 
 // Combinar todas las dependencias
 const allDependencies = [...devDependencies, ...dependencies];
@@ -25,7 +33,6 @@ async function getStableDependency(dependency) {
       const response = await axios.get(`https://registry.npmjs.org/${dependency}`);
       if (response.status === 200 && response.data['dist-tags'] && response.data['dist-tags'].latest) {
         const latestStableVersion = response.data['dist-tags'].latest;
-        console.log(`La última versión estable de ${dependency} es: ${latestStableVersion}`);
         return latestStableVersion;
       } else {
         console.log(`No se pudo obtener la última versión estable de ${dependency}.`);
@@ -58,9 +65,7 @@ const updateDependency = async (index) => {
         // Ejecutar el comando para actualizar la dependencia
         exec(`npm install ${dependency}@${latestVersion}`, (error, stdout, stderr) => {
             if (error) {
-                console.error(`Error al actualizar ${dependency}: ${error.message}`);
-            } else {
-                console.log(`Se ha actualizado ${dependency} a la versión ${latestVersion}`);
+                console.error(`Error al actualizar ${dependency}: no se debió actualizar ${dependenciesToUpdate[index - 1]}`);
             }
             // Continuar con la siguiente dependencia
             updateDependency(index + 1);
