@@ -1,5 +1,6 @@
 const { exec } = require("child_process");
 const fs = require("fs");
+const axios = require("axios");
 
 // Leer el archivo package.json
 const packageJson = JSON.parse(fs.readFileSync("package.json"));
@@ -8,57 +9,51 @@ const packageJson = JSON.parse(fs.readFileSync("package.json"));
 const dependencies = Object.keys(packageJson.dependencies || {});
 const devDependencies = Object.keys(packageJson.devDependencies || {});
 
+// Lista de dependencias a ignorar (puedes agregar las que desees)
+const ignoreDependencies = ["history"];
+
 // Combinar todas las dependencias
 const allDependencies = [...dependencies, ...devDependencies];
 
+// Filtrar las dependencias ignoradas
+const dependenciesToUpdate = allDependencies.filter(
+  (dependency) => !ignoreDependencies.includes(dependency)
+);
+
+
 // Función para actualizar una dependencia y continuar con la siguiente
-const updateDependency = (index) => {
-  if (index >= allDependencies.length) {
+const updateDependency = async (index) => {
+  if (index >= dependenciesToUpdate.length) {
     console.log("Todas las dependencias se han actualizado.");
     return;
   }
 
-  const dependency = allDependencies[index];
+  const dependency = dependenciesToUpdate[index];
 
-  // Ejecutar el comando para actualizar la dependencia
-  exec(`npm install ${dependency}@latest`, (error, stdout, stderr) => {
-    if (error) {
-      console.error(`Error al actualizar ${dependency}: ${error.message}`);
+  // Obtener información sobre las versiones disponibles del paquete
+  try {
+    const response = await axios.get(`https://registry.npmjs.org/${dependency}`);
+    const versions = Object.keys(response.data.versions || {});
 
-      // Realizar un checkout del cambio para deshacer la actualización fallida
-      exec(`git checkout package.json`, (checkoutError, checkoutStdout, checkoutStderr) => {
-        if (checkoutError) {
-          console.error(`Error al hacer git checkout: ${checkoutError.message}`);
-        } else {
-          console.log(`Se ha realizado un git checkout para ${dependency}`);
-        }
-        // Continuar con la siguiente dependencia
-        updateDependency(index + 1);
-      });
-    } else {
-      console.log(`Se ha actualizado ${dependency}`);
+    // Encontrar la versión más reciente
+    const latestVersion = versions.pop();
 
-      // Realizar git add y git commit para el archivo package.json
-      exec(`git add package.json`, (addError, addStdout, addStderr) => {
-        if (addError) {
-          console.error(`Error al hacer git add: ${addError.message}`);
-          // Continuar con la siguiente dependencia
-          updateDependency(index + 1);
-        } else {
-          const commitMessage = `Actualización de ${dependency} a la última versión`;
-          exec(`git commit -m "${commitMessage}"`, (commitError, commitStdout, commitStderr) => {
-            if (commitError) {
-              console.error(`Error al hacer git commit: ${commitError.message}`);
-            } else {
-              console.log(`Se ha realizado un git commit para ${dependency}`);
-            }
-            // Continuar con la siguiente dependencia
-            updateDependency(index + 1);
-          });
-        }
-      });
-    }
-  });
+    // Ejecutar el comando para actualizar la dependencia
+    exec(`npm install ${dependency}@${latestVersion}`, (error, stdout, stderr) => {
+      if (error) {
+        console.error(`Error al actualizar ${dependency}: ${error.message}`);
+      } else {
+        console.log(`Se ha actualizado ${dependency} a la versión ${latestVersion}`);
+      }
+
+      // Continuar con la siguiente dependencia
+      updateDependency(index + 1);
+    });
+  } catch (error) {
+    console.error(`Error al obtener información sobre ${dependency}: ${error.message}`);
+    // Continuar con la siguiente dependencia si ocurre un error
+    updateDependency(index + 1);
+  }
 };
 
 // Comenzar a actualizar las dependencias desde la posición 0
