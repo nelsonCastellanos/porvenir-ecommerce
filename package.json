@@ -4,7 +4,7 @@
   "description": "MERN Ecommerce",
   "main": "server/index.js",
   "scripts": {
-    "clean": "rimraf dist",
+    "clean": "rm -rf dist",
     "build": "npm run clean && cross-env NODE_ENV=production webpack --mode production  --config webpack/webpack.prod.js",
     "dev:client": "cross-env NODE_ENV=development webpack-dev-server  --config webpack/webpack.dev.js",
     "dev:server": "nodemon",
@@ -34,10 +34,10 @@
   },
   "homepage": "https://github.com/mohamedsamara/mern-ecommerce#readme",
   "dependencies": {
-    "@fontsource/poppins": "^4.5.9",
-    "autosuggest-highlight": "^3.1.1",
-    "aws-sdk": "^2.799.0",
-    "axios": "^0.21.1",
+    "@fontsource/poppins": "^5.0.5",
+    "autosuggest-highlight": "^3.3.4",
+    "aws-sdk": "^2.1420.0",
+    "axios": "^1.4.0",
     "bcryptjs": "^2.4.3",
     "bootstrap": "^4.3.1",
     "compression": "^1.7.4",
