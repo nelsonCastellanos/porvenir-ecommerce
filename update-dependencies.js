@@ -10,12 +10,7 @@ const dependencies = Object.keys(packageJson.dependencies || {});
 const devDependencies = Object.keys(packageJson.devDependencies || {});
 
 // Lista de dependencias a ignorar (puedes agregar las que desees)
-const ignoreDependencies = ["@fontsource/poppins","autosuggest-highlight",
-"aws-sdk","axios","bcryptjs","bootstrap","compression","connected-react-router"
-,"cors","crypto","dompurify","dotenv","express","font-awesome","helmet","history",
-"jsonwebtoken","mailchimp-api-v3","mailgun-js","mobile-detect","mongoose",
-"mongoose-slug-generator","multer","node-sass","passport","passport-facebook",
-"passport-google-oauth2","passport-jwt","rc-slider"];
+const ignoreDependencies = ["autoprefixer", "history", "node-sass"];
 
 // Combinar todas las dependencias
 const allDependencies = [...devDependencies, ...dependencies];
@@ -58,7 +53,7 @@ const updateDependency = async (index) => {
         
 
         // Encontrar la versión más reciente
-        const latestVersion = getStableDependency(dependency);
+        const latestVersion =  await getStableDependency(dependency);
 
         // Ejecutar el comando para actualizar la dependencia
         exec(`npm install ${dependency}@${latestVersion}`, (error, stdout, stderr) => {
