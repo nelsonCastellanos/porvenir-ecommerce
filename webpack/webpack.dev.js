@@ -68,14 +68,13 @@ const config = {
   devServer: {
     port: 8080,
     open: true,
-    inline: true,
     compress: true,
     hot: true,
-    disableHostCheck: false,
+    allowedHosts: 'all',
     historyApiFallback: true,
     proxy: {
       '/api': 'http://localhost:3000'
-    }
+    },
   },
   devtool: 'eval-source-map'
 };
