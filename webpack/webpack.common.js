@@ -27,7 +27,7 @@ module.exports = {
       patterns: [
         { 
           from: "client/public", 
-          to: "client/public",
+          to: "./",
           globOptions: {
             ignore: ["**/index.html"],
           },
