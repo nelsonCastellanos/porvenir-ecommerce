@@ -1,5 +1,5 @@
 const path = require('path');
-const CopyPlugin = require("copy-webpack-plugin");
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 const Dotenv = require('dotenv-webpack');
 
 const CURRENT_WORKING_DIR = process.cwd();
@@ -23,16 +23,16 @@ module.exports = {
   },
   plugins: [
     new Dotenv(),
-    new CopyPlugin({
+    new CopyWebpackPlugin({
       patterns: [
         { 
           from: "client/public", 
-          to: "./",
+          to: "client/public",
           globOptions: {
             ignore: ["**/index.html"],
           },
         },
       ],
-    }),
+    })
   ]
 };
