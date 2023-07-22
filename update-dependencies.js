@@ -24,12 +24,40 @@ const updateDependency = (index) => {
   exec(`npm install ${dependency}@latest`, (error, stdout, stderr) => {
     if (error) {
       console.error(`Error al actualizar ${dependency}: ${error.message}`);
+
+      // Realizar un checkout del cambio para deshacer la actualización fallida
+      exec(`git checkout package.json`, (checkoutError, checkoutStdout, checkoutStderr) => {
+        if (checkoutError) {
+          console.error(`Error al hacer git checkout: ${checkoutError.message}`);
+        } else {
+          console.log(`Se ha realizado un git checkout para ${dependency}`);
+        }
+        // Continuar con la siguiente dependencia
+        updateDependency(index + 1);
+      });
     } else {
       console.log(`Se ha actualizado ${dependency}`);
-    }
 
-    // Continuar con la siguiente dependencia
-    updateDependency(index + 1);
+      // Realizar git add y git commit para el archivo package.json
+      exec(`git add package.json`, (addError, addStdout, addStderr) => {
+        if (addError) {
+          console.error(`Error al hacer git add: ${addError.message}`);
+          // Continuar con la siguiente dependencia
+          updateDependency(index + 1);
+        } else {
+          const commitMessage = `Actualización de ${dependency} a la última versión`;
+          exec(`git commit -m "${commitMessage}"`, (commitError, commitStdout, commitStderr) => {
+            if (commitError) {
+              console.error(`Error al hacer git commit: ${commitError.message}`);
+            } else {
+              console.log(`Se ha realizado un git commit para ${dependency}`);
+            }
+            // Continuar con la siguiente dependencia
+            updateDependency(index + 1);
+          });
+        }
+      });
+    }
   });
 };
 
