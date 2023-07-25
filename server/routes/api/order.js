@@ -140,8 +140,7 @@ router.get('/', auth, async (req, res) => {
         }
       })
       .limit(limit * 1)
-      .skip((page - 1) * limit)
-      .exec();
+      .skip((page - 1) * limit);
 
     const count = await Order.countDocuments();
     const orders = store.formatOrders(ordersDoc);
@@ -178,8 +177,7 @@ router.get('/me', auth, async (req, res) => {
         }
       })
       .limit(limit * 1)
-      .skip((page - 1) * limit)
-      .exec();
+      .skip((page - 1) * limit);
 
     const count = await Order.countDocuments(query);
     const orders = store.formatOrders(ordersDoc);

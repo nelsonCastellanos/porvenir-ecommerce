@@ -55,7 +55,6 @@
     "mailgun-js": "^0.22.0",
     "mobile-detect": "^1.4.5",
     "mongoose": "^7.4.1",
-    "mongoose-slug-generator": "^1.0.4",
     "multer": "^1.4.5-lts.1",
     "node-sass": "^8.0.0",
     "passport": "^0.6.0",

@@ -44,8 +44,7 @@ router.get('/', auth, async (req, res) => {
       .sort('-created')
       .populate('merchant', 'name')
       .limit(limit * 1)
-      .skip((page - 1) * limit)
-      .exec();
+      .skip((page - 1) * limit);
 
     const count = await User.countDocuments();
 

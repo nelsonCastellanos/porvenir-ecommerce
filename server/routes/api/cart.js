@@ -53,7 +53,7 @@ router.post('/add/:cartId', auth, async (req, res) => {
     const product = req.body.product;
     const query = { _id: req.params.cartId };
 
-    await Cart.updateOne(query, { $push: { products: product } }).exec();
+    await Cart.updateOne(query, { $push: { products: product } })
 
     res.status(200).json({
       success: true
@@ -70,7 +70,7 @@ router.delete('/delete/:cartId/:productId', auth, async (req, res) => {
     const product = { product: req.params.productId };
     const query = { _id: req.params.cartId };
 
-    await Cart.updateOne(query, { $pull: { products: product } }).exec();
+    await Cart.updateOne(query, { $pull: { products: product } });
 
     res.status(200).json({
       success: true

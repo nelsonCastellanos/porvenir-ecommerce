@@ -6,21 +6,15 @@ const keys = require('../config/keys');
 const { database } = keys;
 
 const setupDB = async () => {
+  console.log("se está llmando")
+
   try {
-    // Connect to MongoDB
-    mongoose.set('useCreateIndex', true);
-    mongoose
-      .connect(database.url, {
-        useNewUrlParser: true,
-        useUnifiedTopology: true,
-        useFindAndModify: false
-      })
-      .then(() =>
-        console.log(`${chalk.green('✓')} ${chalk.blue('MongoDB Connected!')}`)
-      )
-      .catch(err => console.log(err));
+    await mongoose.connect(database.url, {
+      useNewUrlParser: true,
+    })
+    console.log(`${chalk.green('✓')} ${chalk.blue('MongoDB Connected!')}`)
   } catch (error) {
-    return null;
+    console.log(error);
   }
 };
 

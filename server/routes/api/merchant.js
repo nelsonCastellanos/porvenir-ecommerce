@@ -102,8 +102,7 @@ router.get('/', auth, role.check(ROLES.Admin), async (req, res) => {
       .populate('brand')
       .sort('-created')
       .limit(limit * 1)
-      .skip((page - 1) * limit)
-      .exec();
+      .skip((page - 1) * limit);
 
     const count = await Merchant.countDocuments();
 

@@ -46,8 +46,7 @@ router.get('/', async (req, res) => {
         select: 'name slug imageUrl'
       })
       .limit(limit * 1)
-      .skip((page - 1) * limit)
-      .exec();
+      .skip((page - 1) * limit);
 
     const count = await Review.countDocuments();
 
