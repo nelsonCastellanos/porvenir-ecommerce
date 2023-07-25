@@ -1,6 +1,8 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const webpackMerge = require('webpack-merge');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+
 
 const common = require('./webpack.common');
 
@@ -18,14 +20,14 @@ const config = {
       {
         test: /\.(scss|sass|css)$/,
         use: [
-          'style-loader',
+          MiniCssExtractPlugin.loader,
           {
             loader: 'css-loader'
           },
           {
             loader: 'postcss-loader',
             options: {
-              plugins: () => [require('autoprefixer')]
+              plugins: () => [require('cssnano'), require('autoprefixer')]
             }
           },
           {
@@ -40,7 +42,7 @@ const config = {
             loader: 'file-loader',
             options: {
               outputPath: 'images',
-              name: '[name].[ext]'
+              name: '[name].[hash].[ext]'
             }
           }
         ]
@@ -52,7 +54,7 @@ const config = {
             loader: 'file-loader',
             options: {
               outputPath: 'fonts',
-              name: '[name].[ext]'
+              name: '[name].[hash].[ext]'
             }
           }
         ]
@@ -63,17 +65,20 @@ const config = {
     new HtmlWebpackPlugin({
       template: path.join(CURRENT_WORKING_DIR, 'client/public/index.html'),
       inject: true
-    })
+    }),
+    new MiniCssExtractPlugin({
+      filename: 'css/[name].[hash].css'
+    }),
   ],
   devServer: {
-    port: 8080,
+    port: 8010,
     open: true,
     compress: true,
     hot: true,
     allowedHosts: 'all',
     historyApiFallback: true,
     proxy: {
-      '/api': 'http://localhost:3000'
+      '/api': 'http://localhost:3001'
     },
   },
   devtool: 'eval-source-map'
