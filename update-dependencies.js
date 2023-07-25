@@ -11,17 +11,11 @@ const devDependencies = Object.keys(packageJson.devDependencies || {});
 
 // Lista de dependencias a ignorar (puedes agregar las que desees)
 const ignoreDependencies = [
-    "autoprefixer", "history", "node-sass",
-    "@babel/core",
-    "@babel/plugin-proposal-class-properties",
-    "@babel/polyfill",
-    "@babel/preset-env",
-    "@babel/preset-react",
-    "autoprefixer",
+    "history", "node-sass", "react", "react-redux"
 ];
 
 // Combinar todas las dependencias
-const allDependencies = [...devDependencies, ...dependencies];
+const allDependencies = [...dependencies];
 
 // Filtrar las dependencias ignoradas
 const dependenciesToUpdate = allDependencies.filter(

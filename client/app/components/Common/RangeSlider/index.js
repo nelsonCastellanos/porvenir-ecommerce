@@ -5,25 +5,24 @@
  */
 
 import React from 'react';
-import Slider from 'rc-slider';
+import Slider, { SliderTooltip } from 'rc-slider';
 
-// const { createSliderWithTooltip } = Slider;
-// const Range = createSliderWithTooltip(Slider.Range);
-// const { Handle } = Slider;
+const { createSliderWithTooltip } = Slider;
+const Range = createSliderWithTooltip(Slider.Range);
+const { Handle } = Slider;
 
 const handle = props => {
   const { value, dragging, index, ...restProps } = props;
   return (
-    <p>hola soy un slider</p>
-    /* <SliderTooltip
+    <SliderTooltip
       prefixCls='rc-slider-tooltip'
       overlay={`$${value}`}
       visible={dragging}
       placement='top'
       key={index}
-    > 
+    >
       <Handle value={value} {...restProps} />
-    </SliderTooltip> */
+    </SliderTooltip>
   );
 };
 

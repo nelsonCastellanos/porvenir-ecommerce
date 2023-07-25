@@ -3,7 +3,6 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const webpackMerge = require('webpack-merge');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
-
 const common = require('./webpack.common');
 
 const CURRENT_WORKING_DIR = process.cwd();
@@ -68,17 +67,23 @@ const config = {
     }),
     new MiniCssExtractPlugin({
       filename: 'css/[name].[hash].css'
-    }),
+    })
   ],
   devServer: {
-    port: 8010,
+    port: 8080,
     open: true,
     compress: true,
     hot: true,
     allowedHosts: 'all',
     historyApiFallback: true,
     proxy: {
-      '/api': 'http://localhost:3001'
+      '/api': "http://localhost:3000",
+      bypass: function (req, res, proxyOptions) {
+        if (req.headers.accept.indexOf('html') !== -1) {
+          console.log('Skipping proxy for browser request.');
+          return '/index.html';
+        }
+      },
     },
   },
   devtool: 'eval-source-map'
