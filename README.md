@@ -28,13 +28,10 @@ An ecommerce store built with MERN stack, and utilizes third party API's. This e
 ```
 docker compose up -d
 
-docker exec -it porvenir-ecommerce-mongodb-1 mongosh --host 0.0.0.0 \
-  -u admin \
-  -p password \
-  --authenticationDatabase admin \
-  --eval "use porvenir_ecommerce"
+docker exec -it porvenir-ecommerce-1-mongodb-1 mongosh --host 0.0.0.0 -u admin  -p password  --authenticationDatabase admin  --eval "use porvenir_ecommerce"
 
-npm run seed:db [email-***@****.com] [password-******] // This is just an example.
+npm run seed:db email-***@****.com password-****** // This is just an example.
+
 ```
 
 ## Demo
@@ -66,6 +63,9 @@ $ npm install
   * FACEBOOK_CLIENT_ID & FACEBOOK_CLIENT_SECRET & FACEBOOK_CALLBACK_URL => Facebook Auth configuration
   * AWS_ACCESS_KEY_ID & AWS_SECRET_ACCESS_KEY & AWS_REGION & AWS_BUCKET_NAME => AWS configuration
 ```
+## AUTHORIZE APP
+
+Create JSON Web Token Using Secret Key in https://www.javainuse.com/jwtgenerator and replace it into .env variable "JWT_SECRET"
 
 ## Start development
 
