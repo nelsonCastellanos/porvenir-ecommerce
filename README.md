@@ -26,6 +26,8 @@ An ecommerce store built with MERN stack, and utilizes third party API's. This e
 * For more information, see code [here](server/utils/seed.js)
 
 ```
+docker compose up -d
+
 docker exec -it porvenir-ecommerce-mongodb-1 mongosh --host 0.0.0.0 \
   -u admin \
   -p password \
