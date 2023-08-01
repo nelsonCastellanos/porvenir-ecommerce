@@ -89,7 +89,8 @@ router.get('/list', async (req, res) => {
       page = 1,
       limit = 10
     } = req.query;
-    sortOrder = JSON.parse(sortOrder);
+    const firstKey = Object.keys(sortOrder)[0];
+    sortOrder[firstKey] =  parseInt(sortOrder[firstKey]);
 
     const categoryFilter = category ? { category } : {};
     const basicQuery = getStoreProductsQuery(min, max, rating);

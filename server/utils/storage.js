@@ -1,5 +1,4 @@
 const AWS = require('aws-sdk');
-
 const keys = require('../config/keys');
 
 exports.s3Upload = async image => {
@@ -17,9 +16,22 @@ exports.s3Upload = async image => {
       Bucket: keys.aws.bucketName,
       Key: image.originalname,
       Body: image.buffer,
-      ContentType: image.mimetype,
-      ACL: 'public-read'
+      ContentType: image.mimetype
     };
+
+    const policy = {
+      Version: "2012-10-17",
+      Statement: [
+        {
+          Effect: "Allow",
+          Principal: "*",
+          Action: "s3:PutObject",
+          Resource: `arn:aws:s3:::${keys.aws.bucketName}/*`
+        }
+      ]
+    };
+
+    params.Policy = JSON.stringify(policy);
 
     const s3Upload = await s3bucket.upload(params).promise();
 
