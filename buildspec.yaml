@@ -4,8 +4,10 @@ phases:
   install:
     runtime-versions:
       nodejs: 18
+    commands:
+      - echo "Iniciando la fase de instalación"
+      - npm install  # Instalar las dependencias del frontend
   build:
     commands:
       - echo "Iniciando la compilación y pruebas del servidor"
-      - npm install  # Instalar las dependencias del servidor
       - npm run build  # Compilar el servidor (si es necesario, dependiendo de tu aplicación)
