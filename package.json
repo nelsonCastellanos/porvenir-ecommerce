@@ -1,7 +1,7 @@
 {
-  "name": "mern-ecommerce",
+  "name": "porvenir_ecommerce",
   "version": "1.0.0",
-  "description": "MERN Ecommerce",
+  "description": "Porvenir Susa ecommerce",
   "main": "server/index.js",
   "scripts": {
     "clean": "rm -rf dist",
