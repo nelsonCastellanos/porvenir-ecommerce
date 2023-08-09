@@ -19,8 +19,8 @@ functions:
           method: ANY
     environment:
       PORT: 3000
-      MONGO_URI: ${secrets:porvenir_monogodb_uri}
-      JWT_SECRET: ${secrets:porvenir_jwt_secret}
+      MONGO_URI: ${param:porvenir_monogodb_uri}
+      JWT_SECRET: ${param:porvenir_jwt_secret}
       MAILCHIMP_KEY:
       MAILCHIMP_LIST_KEY:
       MAILGUN_KEY:
@@ -35,7 +35,4 @@ functions:
       BASE_CLIENT_URL: ${param:porvenir_client_url}
       BASE_SERVER_URL: ${param:porvenir_server_url}
       BASE_API_URL: api
-      AWS_ACCESS_KEY_ID: ${secrets:porvenir_aws_access_key_id}
-      AWS_SECRET_ACCESS_KEY: ${secrets:porvenir_aws_secret_access_key}
-      AWS_REGION: ${param:porvenir_aws_region}
       AWS_BUCKET_NAME: elporvenir-ecommerce-content
