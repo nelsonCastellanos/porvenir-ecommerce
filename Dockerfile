@@ -1,6 +1,9 @@
 # Use an official Node.js image as the base image
 FROM public.ecr.aws/lambda/nodejs:18.2023.08.02.09
 
+# Set the working directory inside the container
+WORKDIR /var/task
+
 COPY . ${LAMBDA_TASK_ROOT}
 
 # Install only production dependencies
