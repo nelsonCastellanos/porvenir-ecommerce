@@ -17,10 +17,11 @@ services:
       - ME_CONFIG_MONGODB_ADMINPASSWORD=password
       - ME_CONFIG_MONGODB_ENABLE_ADMIN=true # This line enables the admin interface
   porvenir_ecommerce:
-    build:
-      context: .
-      dockerfile: Dockerfile
+    image: porvenir-ecommerce:v1.1.5
     ports:
       - "3000:3000"
+    env_file:
+      - .env
     environment:
       - NODE_ENV=production
+      - MONGO_URI=mongodb://admin:password@mongodb:27017/porvenir_ecommerce?authSource=admin

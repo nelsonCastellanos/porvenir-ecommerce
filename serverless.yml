@@ -1,0 +1,19 @@
+org: nelsoncastellanos
+app: porvenirecommerce
+service: porvenirEcommerce
+
+provider:
+  name: aws
+  ecr:
+    images:
+      porvenir_ecommerce:
+        path: ./
+
+functions:
+  porvenirEcommerce:
+    image:
+      name: porvenir_ecommerce
+    events:
+      - httpApi:
+          path: /
+          method: ANY

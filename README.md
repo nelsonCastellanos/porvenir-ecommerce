@@ -119,3 +119,38 @@ $ npm start
 
 ```
 
+
+## Image Push
+
+Here is a fundamental set of steps to push a Docker image to Amazon's Elastic Container Registry (ECR):
+
+1. **Build the image:**
+   You can build your Docker image using the `docker build` command as shown below:
+
+   ```bash
+   docker build -t porvenir-ecommerce:tag .
+   ```
+   Here, be sure to replace `porvenir-ecommerce:tag` with the corresponding name and tag of your Docker image.
+
+2. **Authenticate with ECR:**
+   To authenticate with your ECR registry, you can use the `aws ecr get-login-password` command. Make sure to replace `us-east-1` and `your-account-id` with the corresponding values for your AWS account.
+
+   ```bash
+   aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin your-account-id.dkr.ecr.us-east-1.amazonaws.com
+   ```
+
+3. **Tag the Docker image:**
+   Before pushing your image to ECR, you first need to tag it using the `docker tag` command. Below is the general format for doing so:
+
+   ```bash
+   docker tag porvenir-ecommerce:v1.0.0 your-account-id.dkr.ecr.us-east-1.amazonaws.com/porvenir-ecommerce:v1.0.0
+   ```
+   In this case, `porvenir-ecommerce` is the name of the Docker image you have in your local environment and `porvenir-ecommerce` is the name you want for the image in ECR. `tag` refers to your image's tag, for example, the version.
+
+4. **Push the image to ECR:**
+   Finally, you can push your image to ECR using the `docker push` command:
+
+   ```bash
+   docker push your-account-id.dkr.ecr.us-east-1.amazonaws.com/porvenir-ecommerce:v1.0.0
+   ```
+   This command will push your Docker image to the specified repository in ECR.

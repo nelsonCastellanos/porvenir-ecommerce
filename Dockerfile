@@ -1,10 +1,7 @@
 # Use an official Node.js image as the base image
-FROM node:18.17.0
+FROM public.ecr.aws/lambda/nodejs:18.2023.08.02.09
 
-# Set the working directory inside the container
-WORKDIR /usr/src/app
-
-COPY . .
+COPY . ${LAMBDA_TASK_ROOT}
 
 # Install only production dependencies
 RUN npm install
@@ -19,4 +16,4 @@ ENV NODE_ENV=production
 RUN npm run build
 
 # Run `npm start` when the container starts
-CMD ["npm", "start"]
+ENTRYPOINT ["npm", "start"]
