@@ -36,3 +36,4 @@ functions:
       BASE_SERVER_URL: ${param:porvenir_server_url}
       BASE_API_URL: api
       AWS_BUCKET_NAME: elporvenir-ecommerce-content
+      NPM_CONFIG_CACHE: /tmp/.npm
