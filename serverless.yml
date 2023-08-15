@@ -18,7 +18,7 @@ functions:
           path: /
           method: ANY
     environment:
-      PORT: 3000
+      PORT: 8080
       MONGO_URI: ${param:porvenir_monogodb_uri}
       JWT_SECRET: ${param:porvenir_jwt_secret}
       MAILCHIMP_KEY:
@@ -31,7 +31,7 @@ functions:
       GOOGLE_CALLBACK_URL: auth/google/callback
       FACEBOOK_CLIENT_ID:
       FACEBOOK_CLIENT_SECRET:
-      FACEBOOK_CALLBACK_URL: auth/fECSacebook/callback
+      FACEBOOK_CALLBACK_URL: auth/facebook/callback
       BASE_CLIENT_URL: ${param:porvenir_client_url}
       BASE_SERVER_URL: ${param:porvenir_server_url}
       BASE_API_URL: api
