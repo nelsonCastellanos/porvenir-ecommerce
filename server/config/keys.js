@@ -33,8 +33,8 @@ module.exports = {
     callbackURL: process.env.FACEBOOK_CALLBACK_URL
   },
   aws: {
-    accessKeyId: process.env.AWS_ACCESS_KEY_ID,
-    secretAccessKey: process.env.AWS_SECRET_ACCESS_KEY,
+    accessKeyId: process.env.AWS_ACCESS_KEY_ID_PORVENIR,
+    secretAccessKey: process.env.AWS_SECRET_ACCESS_KEY_PORVENIR,
     region: process.env.AWS_REGION,
     bucketName: process.env.AWS_BUCKET_NAME
   }
