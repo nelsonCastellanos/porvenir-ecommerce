@@ -4,6 +4,21 @@ service: porvenirEcommerce
 
 provider:
   name: aws
+  iam:
+    role:
+      statements:
+        # Allow functions to list all buckets
+        - Effect: Allow
+          Action: 's3:ListBucket'
+          Resource: '*'
+        # Allow functions to read/write objects in a bucket
+        - Effect: Allow
+          Action:
+            - 's3:GetObject'
+            - 's3:PutObject'
+          Resource:
+            - 'arn:aws:s3:::elporvenir-ecommerce-content/*'
+  profile: default
   ecr:
     images:
       porvenir_ecommerce:
