@@ -56,3 +56,5 @@ functions:
       BASE_API_URL: api
       AWS_BUCKET_NAME: elporvenir-ecommerce-content
       NPM_CONFIG_CACHE: /tmp/.npm
+      AWS_ACCESS_KEY_ID_PORVENIR: ${param:porvenir_aws_access_key_id}
+      AWS_SECRET_ACCESS_KEY_PORVENIR: ${param:porvenir_aws_secret_access_key}
