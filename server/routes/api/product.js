@@ -71,6 +71,7 @@ router.get('/list/search/:name', async (req, res) => {
       products: productDoc
     });
   } catch (error) {
+    console.log()
     res.status(400).json({
       error: 'Your request could not be processed. Please try again.'
     });
@@ -319,6 +320,7 @@ router.post(
         product: savedProduct
       });
     } catch (error) {
+      console.error("Error while processing the request:", error);
       return res.status(400).json({
         error: 'Your request could not be processed. Please try again.'
       });
