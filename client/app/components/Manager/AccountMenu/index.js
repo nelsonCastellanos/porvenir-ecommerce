@@ -32,7 +32,7 @@ const AccountMenu = props => {
         // ariaLabel={isMenuOpen ? 'dashboard menu expanded' : 'dashboard menu collapse'}
         onClick={toggleMenu}
       />
-      <h3 className='panel-title'>Account</h3>
+      <h3 className='panel-title'>Cuenta</h3>
       <Navbar color='light' light expand='md'>
         <Collapse isOpen={isMenuOpen} navbar>
           <ul className='panel-links'>

@@ -91,7 +91,7 @@ class ProductPage extends React.PureComponent {
                       <hr />
                       {product.brand && (
                         <p className='by'>
-                          see more from{' '}
+                          Ver más para {' '}
                           <Link
                             to={`/shop/brand/${product.brand.slug}`}
                             className='default-link'
@@ -107,12 +107,12 @@ class ProductPage extends React.PureComponent {
                       <Input
                         type={'number'}
                         error={shopFormErrors['quantity']}
-                        label={'Quantity'}
+                        label={'Cantidad'}
                         name={'quantity'}
                         decimals={false}
                         min={1}
                         max={product.inventory}
-                        placeholder={'Product Quantity'}
+                        placeholder={'Cantidad'}
                         disabled={
                           product.inventory <= 0 && !shopFormErrors['quantity']
                         }

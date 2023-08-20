@@ -16,7 +16,7 @@ const Checkout = props => {
       <div className='checkout-actions'>
         <Button
           variant='primary'
-          text='Continue shopping'
+          text='Continuar compra'
           onClick={() => handleShopping()}
         />
         {authenticated ? (

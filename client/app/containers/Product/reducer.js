@@ -44,7 +44,7 @@ const initialState = {
     taxable: { value: 0, label: 'No' },
     brand: {
       value: 0,
-      label: 'No Options Selected'
+      label: 'Opción no seleccionada'
     }
   },
   isLoading: false,
@@ -170,7 +170,7 @@ const productReducer = (state = initialState, action) => {
           taxable: { value: 0, label: 'No' },
           brand: {
             value: 0,
-            label: 'No Options Selected'
+            label: 'Opción no seleccionada'
           }
         },
         product: {

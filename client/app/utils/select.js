@@ -19,7 +19,7 @@ export const formatSelectOptions = (data, empty = false, from) => {
   if (empty) {
     const emptyOption = {
       value: 0,
-      label: 'No option selected'
+      label: 'Opción no seleccionada'
     };
     newSelectOptions.unshift(emptyOption);
   }

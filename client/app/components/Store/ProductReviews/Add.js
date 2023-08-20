@@ -13,7 +13,7 @@ import Input from '../../Common/Input';
 import Button from '../../Common/Button';
 
 const recommedableSelect = [
-  { value: 1, label: 'Yes' },
+  { value: 1, label: 'Si' },
   { value: 0, label: 'No' }
 ];
 

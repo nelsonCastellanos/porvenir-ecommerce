@@ -85,7 +85,7 @@ const ProductFilter = props => {
   return (
     <div className='product-filter'>
       <Card className='mb-4'>
-        <CardHeader tag='h3'>Price</CardHeader>
+        <CardHeader tag='h3'>Precio</CardHeader>
         <CardBody>
           <div className='mx-2 mb-3'>
             <RangeSlider

@@ -284,11 +284,11 @@ router.post(
       }
 
       if (!quantity) {
-        return res.status(400).json({ error: 'You must enter a quantity.' });
+        return res.status(400).json({ error: 'Debe ingresar una cantidad.' });
       }
 
       if (!price) {
-        return res.status(400).json({ error: 'You must enter a price.' });
+        return res.status(400).json({ error: 'Debe ingresar un precio.' });
       }
 
       const foundProduct = await Product.findOne({ sku });

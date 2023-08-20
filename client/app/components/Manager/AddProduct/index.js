@@ -15,7 +15,7 @@ import Button from '../../Common/Button';
 import SelectOption from '../../Common/SelectOption';
 
 const taxableSelect = [
-  { value: 1, label: 'Yes' },
+  { value: 1, label: 'Si' },
   { value: 0, label: 'No' }
 ];
 
@@ -43,9 +43,9 @@ const AddProduct = props => {
             <Input
               type={'text'}
               error={formErrors['sku']}
-              label={'Sku'}
+              label={'Código'}
               name={'sku'}
-              placeholder={'Product Sku'}
+              placeholder={'Código del producto'}
               value={productFormData.sku}
               onInputChange={(name, value) => {
                 productChange(name, value);
@@ -56,9 +56,9 @@ const AddProduct = props => {
             <Input
               type={'text'}
               error={formErrors['name']}
-              label={'Name'}
+              label={'Nombre del producto'}
               name={'name'}
-              placeholder={'Product Name'}
+              placeholder={'Nombre del producto'}
               value={productFormData.name}
               onInputChange={(name, value) => {
                 productChange(name, value);
@@ -69,9 +69,9 @@ const AddProduct = props => {
             <Input
               type={'textarea'}
               error={formErrors['description']}
-              label={'Description'}
+              label={'Descripción'}
               name={'description'}
-              placeholder={'Product Description'}
+              placeholder={'Descripción del producto'}
               value={productFormData.description}
               onInputChange={(name, value) => {
                 productChange(name, value);
@@ -82,10 +82,10 @@ const AddProduct = props => {
             <Input
               type={'number'}
               error={formErrors['quantity']}
-              label={'Quantity'}
+              label={'Cantidad'}
               name={'quantity'}
               decimals={false}
-              placeholder={'Product Quantity'}
+              placeholder={'Cantidad'}
               value={productFormData.quantity}
               onInputChange={(name, value) => {
                 productChange(name, value);
@@ -96,10 +96,10 @@ const AddProduct = props => {
             <Input
               type={'number'}
               error={formErrors['price']}
-              label={'Price'}
+              label={'Precio'}
               name={'price'}
               min={1}
-              placeholder={'Product Price'}
+              placeholder={'Precio del producto'}
               value={productFormData.price}
               onInputChange={(name, value) => {
                 productChange(name, value);
@@ -109,7 +109,7 @@ const AddProduct = props => {
           <Col xs='12' md='12'>
             <SelectOption
               error={formErrors['taxable']}
-              label={'Taxable'}
+              label={'Sujeto a impuestos'}
               name={'taxable'}
               options={taxableSelect}
               value={productFormData.taxable}
@@ -123,7 +123,7 @@ const AddProduct = props => {
               disabled={user.role === ROLES.Merchant}
               error={formErrors['brand']}
               name={'brand'}
-              label={'Select Brand'}
+              label={'Seleccionar marca'}
               value={
                 user.role === ROLES.Merchant ? brands[1] : productFormData.brand
               }
@@ -138,8 +138,8 @@ const AddProduct = props => {
               type={'file'}
               error={formErrors['file']}
               name={'image'}
-              label={'file'}
-              placeholder={'Please Upload Image'}
+              label={'Imagen del producto'}
+              placeholder={'Por favor seleccione una imagen'}
               value={image}
               onInputChange={(name, value) => {
                 productChange(name, value);
@@ -150,7 +150,7 @@ const AddProduct = props => {
             <Switch
               id={'active-product'}
               name={'isActive'}
-              label={'Active?'}
+              label={'Activo?'}
               checked={productFormData.isActive}
               toggleCheckboxChange={value => productChange('isActive', value)}
             />
@@ -158,7 +158,7 @@ const AddProduct = props => {
         </Row>
         <hr />
         <div className='add-product-actions'>
-          <Button type='submit' text='Add Product' />
+          <Button type='submit' text='Añadir producto' />
         </div>
       </form>
     </div>

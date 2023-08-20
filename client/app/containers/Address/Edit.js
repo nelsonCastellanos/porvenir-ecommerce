@@ -41,7 +41,7 @@ class Edit extends React.PureComponent {
     return (
       <SubPage
         title='Edit Address'
-        actionTitle='Cancel'
+        actionTitle='Cancelar'
         handleAction={() => history.goBack()}
       >
         {address?._id ? (

@@ -37,7 +37,7 @@ const initialState = {
     rating: 0,
     isRecommended: {
       value: 1,
-      label: 'Yes'
+      label: 'Si'
     }
   },
   reviewFormErrors: {}
@@ -100,7 +100,7 @@ const reviewReducer = (state = initialState, action) => {
           rating: 0,
           isRecommended: {
             value: 1,
-            label: 'Yes'
+            label: 'Si'
           }
         },
         reviewFormErrors: {}

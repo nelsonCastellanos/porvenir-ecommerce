@@ -21,10 +21,10 @@ const Footer = () => {
   const footerBusinessLinks = (
     <ul className='support-links'>
       <li className='footer-link'>
-        <Link to='/dashboard'>Account Details</Link>
+        <Link to='/dashboard'>Detalles de la cuenta</Link>
       </li>
       <li className='footer-link'>
-        <Link to='/dashboard/orders'>Orders</Link>
+        <Link to='/dashboard/orders'>Pedidos</Link>
       </li>
     </ul>
   );

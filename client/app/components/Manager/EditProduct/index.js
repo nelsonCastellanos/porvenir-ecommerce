@@ -16,7 +16,7 @@ import Button from '../../Common/Button';
 import SelectOption from '../../Common/SelectOption';
 
 const taxableSelect = [
-  { value: 1, label: 'Yes' },
+  { value: 1, label: 'Si' },
   { value: 0, label: 'No' }
 ];
 
@@ -104,10 +104,10 @@ const EditProduct = props => {
             <Input
               type={'number'}
               error={formErrors['quantity']}
-              label={'Quantity'}
+              label={'Cantidad'}
               name={'quantity'}
               decimals={false}
-              placeholder={'Product Quantity'}
+              placeholder={'Cantidad'}
               value={product.quantity}
               onInputChange={(name, value) => {
                 productChange(name, value);
@@ -118,10 +118,10 @@ const EditProduct = props => {
             <Input
               type={'number'}
               error={formErrors['price']}
-              label={'Price'}
+              label={'Precio'}
               name={'price'}
               min={1}
-              placeholder={'Product Price'}
+              placeholder={'Precio del producto'}
               value={product.price}
               onInputChange={(name, value) => {
                 productChange(name, value);

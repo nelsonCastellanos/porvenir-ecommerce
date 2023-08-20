@@ -27,7 +27,7 @@ class List extends React.PureComponent {
       <>
         <SubPage
           title='Categories'
-          actionTitle='Add'
+          actionTitle='Agregar'
           handleAction={() => history.push('/dashboard/category/add')}
         >
           {isLoading ? (

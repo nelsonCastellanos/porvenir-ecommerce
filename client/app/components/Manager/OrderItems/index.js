@@ -50,7 +50,7 @@ const OrderItems = props => {
     } else if (item.status !== 'Cancelled') {
       if (!isAdmin) {
         return (
-          <DropdownConfirm label='Cancel'>
+          <DropdownConfirm label='Cancelar'>
             <div className='d-flex flex-column align-items-center justify-content-center p-2'>
               <p className='text-center mb-2'>{`Are you sure you want to cancel ${item.product?.name}.`}</p>
               <Button
@@ -123,11 +123,11 @@ const OrderItems = props => {
                         <span className='order-label order-status'>{` ${item.status}`}</span>
                       </p>
                       <p className='mb-1 mr-4'>
-                        Quantity
+                        Cantidad
                         <span className='order-label'>{` ${item.quantity}`}</span>
                       </p>
                       <p>
-                        Total Price
+                        Precio total
                         <span className='order-label'>{` $${item.totalPrice}`}</span>
                       </p>
                     </div>
@@ -142,13 +142,13 @@ const OrderItems = props => {
 
                   <div className='text-center'>
                     <p className='order-label'>{` ${item.quantity}`}</p>
-                    <p>Quantity</p>
+                    <p>Cantidad</p>
                   </div>
 
                   <div className='text-center'>
                     <p className='order-label'>{` $${item.totalPrice}`}</p>
 
-                    <p>Total Price</p>
+                    <p>Precio total</p>
                   </div>
                 </div>
               </div>

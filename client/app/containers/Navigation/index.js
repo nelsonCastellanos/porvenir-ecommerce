@@ -128,7 +128,7 @@ class Navigation extends React.PureComponent {
     } = this.props;
 
     const inputProps = {
-      placeholder: 'Search Products',
+      placeholder: 'Buscar Productos',
       value: searchValue,
       onChange: (_, { newValue }) => {
         onSearch(newValue);
@@ -243,7 +243,7 @@ class Navigation extends React.PureComponent {
                       isOpen={isBrandOpen}
                     >
                       <DropdownToggle nav>
-                        Brands
+                        Marcas
                         <span className='fa fa-chevron-down dropdown-caret'></span>
                       </DropdownToggle>
                       <DropdownMenu right className='nav-brand-dropdown'>
@@ -262,7 +262,7 @@ class Navigation extends React.PureComponent {
                       to='/shop'
                       activeClassName='active'
                     >
-                      Shop
+                      Comprar
                     </NavLink>
                   </NavItem>
                   {authenticated ? (
@@ -275,7 +275,7 @@ class Navigation extends React.PureComponent {
                         <DropdownItem
                           onClick={() => history.push('/dashboard')}
                         >
-                          Dashboard
+                          Administrar
                         </DropdownItem>
                         <DropdownItem onClick={signOut}>Sign Out</DropdownItem>
                       </DropdownMenu>

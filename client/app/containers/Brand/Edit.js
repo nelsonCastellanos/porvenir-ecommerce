@@ -42,7 +42,7 @@ class Edit extends React.PureComponent {
     return (
       <SubPage
         title='Edit Brand'
-        actionTitle='Cancel'
+        actionTitle='Cancelar'
         handleAction={history.goBack}
       >
         {brand?._id ? (

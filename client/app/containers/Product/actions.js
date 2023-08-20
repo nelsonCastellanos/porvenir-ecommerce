@@ -281,8 +281,8 @@ export const addProduct = () => {
         'required.description': 'Description is required.',
         'max.description':
           'Description may not be greater than 10000 characters.',
-        'required.quantity': 'Quantity is required.',
-        'required.price': 'Price is required.',
+        'required.quantity': 'La cantidad es obligatoria.',
+        'required.price': 'El precio es obligatorio.',
         'required.taxable': 'Taxable is required.',
         'required.image': 'Please upload files with jpg, jpeg, png format.',
         'required.brand': 'Brand is required.'
@@ -370,8 +370,8 @@ export const updateProduct = () => {
         'required.description': 'Description is required.',
         'max.description':
           'Description may not be greater than 10000 characters.',
-        'required.quantity': 'Quantity is required.',
-        'required.price': 'Price is required.',
+        'required.quantity': 'La cantidad es obligatoria.',
+        'required.price': 'El precio es obligatorio.',
         'required.taxable': 'Taxable is required.',
         'required.brand': 'Brand is required.'
       });
