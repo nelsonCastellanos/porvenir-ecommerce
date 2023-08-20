@@ -58,7 +58,7 @@ const initialState = {
     name: 'all',
     category: 'all',
     brand: 'all',
-    min: 1000,
+    min: 0,
     max: 1000000,
     rating: 0,
     order: 0,

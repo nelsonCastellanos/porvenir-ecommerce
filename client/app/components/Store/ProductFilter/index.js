@@ -74,7 +74,6 @@ const rating = v => {
     case 20:
       return 4;
     default:
-      0;
       return 5;
   }
 };
@@ -90,8 +89,8 @@ const ProductFilter = props => {
           <div className='mx-2 mb-3'>
             <RangeSlider
               marks={priceMarks}
-              defaultValue={[1000, 1000000]}
-              max={5000000}
+              defaultValue={[0, 1000000]}
+              max={1000000}
               onChange={v => {
                 filterProducts('price', v);
               }}
@@ -100,7 +99,7 @@ const ProductFilter = props => {
         </CardBody>
       </Card>
       <Card>
-        <CardHeader tag='h3'>Rating</CardHeader>
+        <CardHeader tag='h3'>Calificación</CardHeader>
         <CardBody>
           <div className='mx-2 mb-4'>
             <RangeSlider
