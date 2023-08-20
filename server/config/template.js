@@ -79,7 +79,7 @@ exports.contactEmail = () => {
 
 exports.merchantApplicationEmail = () => {
   const message = {
-    subject: 'Sell on MERN Store',
+    subject: 'Vender en Depósito de materiales El Porvenir',
     text: `We received your request! Our team will contact you soon. \n\n`
   };
 

@@ -16,9 +16,9 @@ import {
 const SocialShare = props => {
   const { product } = props;
 
-  const shareMsg = `I ♥ ${
+  const shareMsg = `Yo ♥ ${
     product.name
-  } product on Mern Store!  Here's the link, ${
+  } producto en el Depósito de materiales El Porvenir!  Acá está el link, ${
     window.location.protocol !== 'https' ? 'http' : 'https'
   }://${window.location.host}/product/${product.slug}`;
 
