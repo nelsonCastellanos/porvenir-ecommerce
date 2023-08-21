@@ -10,7 +10,7 @@ WORKDIR /var/task
 COPY . ${LAMBDA_TASK_ROOT}
 
 # Install only production dependencies
-RUN npm install
+RUN npm ci
 
 # Make port 8080 available for the app outside of Docker
 EXPOSE 8080
