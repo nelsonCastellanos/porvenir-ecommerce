@@ -19,7 +19,7 @@ EXPOSE 8080
 ENV NODE_ENV=production
 
 # Run the build script to compile the React frontend
-RUN npm ci
+RUN npm run build
 
 RUN rm -rf client
 
