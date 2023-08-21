@@ -19,7 +19,9 @@ EXPOSE 8080
 ENV NODE_ENV=production
 
 # Run the build script to compile the React frontend
-RUN npm run build
+RUN npm ci
+
+RUN rm -rf client
 
 # Run `npm start` when the container starts
 ENTRYPOINT ["npm", "start"]

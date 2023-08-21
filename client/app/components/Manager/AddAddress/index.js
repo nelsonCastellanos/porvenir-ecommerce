@@ -80,9 +80,9 @@ const AddAddress = props => {
             <Input
               type={'text'}
               error={formErrors['zipCode']}
-              label={'Zipcode'}
-              name={'zipCode'}
-              placeholder={'Por favor ingrese su Zipcode'}
+              label={'Código Postal '}
+              name={'Código Postal '}
+              placeholder={'Por favor ingrese su Código Postal '}
               value={addressFormData.zipCode}
               onInputChange={(name, value) => {
                 addressChange(name, value);
