@@ -180,7 +180,7 @@ class Navigation extends React.PureComponent {
                   />
                 )}
                 <Link to='/'>
-                  <h1 className='logo'>Depósito de materiales El Porvenir</h1>
+                  <h1 className='logo'>El Porvenir Susa</h1>
                 </Link>
               </div>
             </Col>
