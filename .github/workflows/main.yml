@@ -1,15 +1,20 @@
 name: Deploy to ECR
 
 on:
+  
   push:
-    branches: [master]
+    branches: [ master ]
 
 jobs:
+  
   build:
+    
     name: Build Image
     runs-on: ubuntu-latest
     
+    
     steps:
+      
       - name: Check out code
         uses: actions/checkout@v2
       
@@ -24,31 +29,23 @@ jobs:
         id: login-ecr
         uses: aws-actions/amazon-ecr-login@v1
       
-      - name: Generate .env file
-        uses: SpicyPizza/create-envfile@v2.0
-        with:
-          envkey_AWS_ACCESS_KEY_ID_PORVENIR: ${{ secrets.AWS_ACCESS_KEY_ID_PORVENIR }}
-          envkey_AWS_BUCKET_NAME: ${{ secrets.AWS_BUCKET_NAME }}
-          envkey_AWS_SECRET_ACCESS_KEY_PORVENIR: ${{ secrets.AWS_SECRET_ACCESS_KEY_PORVENIR }}
-          envkey_BASE_API_URL: ${{ secrets.BASE_API_URL }}
-          envkey_BASE_CLIENT_URL: ${{ secrets.BASE_CLIENT_URL }}
-          envkey_BASE_SERVER_URL: ${{ secrets.BASE_SERVER_URL }}
-          envkey_FACEBOOK_CALLBACK_URL: ${{ secrets.FACEBOOK_CALLBACK_URL }}
-          envkey_GOOGLE_CALLBACK_URL: ${{ secrets.GOOGLE_CALLBACK_URL }}
-          envkey_JWT_SECRET: ${{ secrets.JWT_SECRET }}
-          envkey_MONGO_URI: ${{ secrets.MONGO_URI }}
-          envkey_NPM_CONFIG_CACHE: ${{ secrets.NPM_CONFIG_CACHE }}
-          envkey_PORT: ${{ secrets.PORT }}
-          directory: var/task
-          file_name: .env
-          fail_on_empty: false
-          sort_keys: false
-      
       - name: Build, tag, and push image to Amazon ECR
         env:
           ECR_REGISTRY: ${{ steps.login-ecr.outputs.registry }}
           ECR_REPOSITORY: porvenir_ecommerce
           IMAGE_TAG: latest
         run: |
-          docker build -t $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG .
+          docker build -t $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG  \
+            --build-arg AWS_ACCESS_KEY_ID_PORVENIR=${{ secrets.AWS_ACCESS_KEY_ID_PORVENIR }} \
+            --build-arg AWS_BUCKET_NAME=${{ secrets.AWS_BUCKET_NAME }} \
+            --build-arg AWS_SECRET_ACCESS_KEY_PORVENIR=${{ secrets.AWS_SECRET_ACCESS_KEY_PORVENIR }} \
+            --build-arg BASE_API_URL=${{ secrets.BASE_API_URL }} \
+            --build-arg BASE_CLIENT_URL=${{ secrets.BASE_CLIENT_URL }} \
+            --build-arg BASE_SERVER_URL=${{ secrets.BASE_SERVER_URL }} \
+            --build-arg FACEBOOK_CALLBACK_URL=${{ secrets.FACEBOOK_CALLBACK_URL }} \
+            --build-arg GOOGLE_CALLBACK_URL=${{ secrets.GOOGLE_CALLBACK_URL }} \
+            --build-arg JWT_SECRET=${{ secrets.JWT_SECRET }} \
+            --build-arg MONGO_URI=${{ secrets.MONGO_URI }} \
+            --build-arg NPM_CONFIG_CACHE=${{ secrets.NPM_CONFIG_CACHE }} \
+            --build-arg PORT=${{ secrets.PORT }} .
           docker push $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG
