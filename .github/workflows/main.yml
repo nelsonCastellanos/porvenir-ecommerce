@@ -40,6 +40,6 @@ jobs:
           
       - name: Update Lambda function
         run: |
-          aws lambda update-function-code --function-name porvenir_ecommerce --image-uri ${{ secrets.AWS_ACCOUNT_ID }}.dkr.ecr.${{ secrets.AWS_REGION }}.amazonaws.com/porvenir_ecommerce:latest
+          aws lambda update-function-code --function-name porvenir_ecommerce --image-uri ${{ secrets.ECR_REGISTRY_ACCOUNT }}.dkr.ecr.${{ secrets.AWS_REGION }}.amazonaws.com/porvenir_ecommerce:latest
         env:
           AWS_REGION: ${{ secrets.AWS_REGION }}
