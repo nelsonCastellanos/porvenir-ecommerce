@@ -39,7 +39,7 @@ jobs:
           envkey_MONGO_URI: ${{ secrets.MONGO_URI }}
           envkey_NPM_CONFIG_CACHE: ${{ secrets.NPM_CONFIG_CACHE }}
           envkey_PORT: ${{ secrets.PORT }}
-          directory: /var/task
+          directory: var/task
           file_name: .env
           fail_on_empty: false
           sort_keys: false
