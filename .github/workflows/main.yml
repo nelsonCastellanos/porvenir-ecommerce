@@ -35,17 +35,5 @@ jobs:
           ECR_REPOSITORY: porvenir_ecommerce
           IMAGE_TAG: latest
         run: |
-          docker build -t $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG  \
-            --build-arg AWS_ACCESS_KEY_ID_PORVENIR=${{ secrets.AWS_ACCESS_KEY_ID_PORVENIR }} \
-            --build-arg AWS_BUCKET_NAME=${{ secrets.AWS_BUCKET_NAME }} \
-            --build-arg AWS_SECRET_ACCESS_KEY_PORVENIR=${{ secrets.AWS_SECRET_ACCESS_KEY_PORVENIR }} \
-            --build-arg BASE_API_URL=${{ secrets.BASE_API_URL }} \
-            --build-arg BASE_CLIENT_URL=${{ secrets.BASE_CLIENT_URL }} \
-            --build-arg BASE_SERVER_URL=${{ secrets.BASE_SERVER_URL }} \
-            --build-arg FACEBOOK_CALLBACK_URL=${{ secrets.FACEBOOK_CALLBACK_URL }} \
-            --build-arg GOOGLE_CALLBACK_URL=${{ secrets.GOOGLE_CALLBACK_URL }} \
-            --build-arg JWT_SECRET=${{ secrets.JWT_SECRET }} \
-            --build-arg MONGO_URI=${{ secrets.MONGO_URI }} \
-            --build-arg NPM_CONFIG_CACHE=${{ secrets.NPM_CONFIG_CACHE }} \
-            --build-arg PORT=${{ secrets.PORT }} .
+          docker build -t $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG .
           docker push $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG
