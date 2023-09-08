@@ -1,0 +1,51 @@
+name: Deploy to ECR
+
+on:
+  
+  push:
+    branches: [ master ]
+
+jobs:
+  
+  build:
+    
+    name: Build Image
+    runs-on: ubuntu-latest
+    
+    
+    steps:
+      
+      - name: Check out code
+        uses: actions/checkout@v2
+      
+      - name: Configure AWS credentials
+        uses: aws-actions/configure-aws-credentials@v1
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: us-east-1
+      
+      - name: Login to Amazon ECR
+        id: login-ecr
+        uses: aws-actions/amazon-ecr-login@v1
+      
+      - name: Build, tag, and push image to Amazon ECR
+        env:
+          ECR_REGISTRY: ${{ steps.login-ecr.outputs.registry }}
+          ECR_REPOSITORY: porvenir_ecommerce
+          IMAGE_TAG: latest
+          AWS_ACCESS_KEY_ID_PORVENIR: ${{ secrets.AWS_ACCESS_KEY_ID_PORVENIR }}
+          AWS_BUCKET_NAME: ${{ secrets.AWS_BUCKET_NAME }}
+          AWS_SECRET_ACCESS_KEY_PORVENIR: ${{ secrets.AWS_SECRET_ACCESS_KEY_PORVENIR }}
+          BASE_API_URL: ${{ secrets.BASE_API_URL }}
+          BASE_CLIENT_URL: ${{ secrets.BASE_CLIENT_URL }}
+          BASE_SERVER_URL: ${{ secrets.BASE_SERVER_URL }}
+          FACEBOOK_CALLBACK_URL: ${{ secrets.FACEBOOK_CALLBACK_URL }}
+          GOOGLE_CALLBACK_URL: ${{ secrets.GOOGLE_CALLBACK_URL }}
+          JWT_SECRET: ${{ secrets.JWT_SECRET }}
+          MONGO_URI: ${{ secrets.MONGO_URI }}
+          NPM_CONFIG_CACHE: ${{ secrets.NPM_CONFIG_CACHE }}
+          PORT: ${{ secrets.PORT }}
+        run: |
+          docker build -t $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG .
+          docker push $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG

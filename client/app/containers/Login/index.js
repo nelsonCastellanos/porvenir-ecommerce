@@ -43,7 +43,7 @@ class Login extends React.PureComponent {
     return (
       <div className='login-form'>
         {isLoading && <LoadingIndicator />}
-        <h2>Login</h2>
+        <h2>Iniciar sesión</h2>
         <hr />
         <form onSubmit={handleSubmit} noValidate>
           <Row>
@@ -93,7 +93,7 @@ class Login extends React.PureComponent {
               <Button
                 type='submit'
                 variant='primary'
-                text='Login'
+                text='Iniciar sesión'
                 disabled={isSubmitting}
               />
               <Button
