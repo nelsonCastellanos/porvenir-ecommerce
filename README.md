@@ -182,3 +182,7 @@ ln -s /usr/local/Cellar/jmeter /Users/ncastellanos/jmeter
 ## Load Testing
 
 For load testing purposes, you can leverage JMeter to simulate multiple users and analyze the performance of your web applications. JMeter allows you to conduct various load testing scenarios, monitor server response times, and assess the scalability of your system. To get started with load testing using JMeter, refer to the official documentation and tutorials available on the [Apache JMeter website](https://jmeter.apache.org/).
+
+```bash
+jmeter -n -t docs/loadtest.jmx -l docs/log.jtl -e -o docs/report/
+``````
