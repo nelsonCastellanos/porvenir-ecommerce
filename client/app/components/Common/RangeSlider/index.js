@@ -5,26 +5,9 @@
  */
 
 import React from 'react';
-import Slider, { SliderTooltip } from 'rc-slider';
+import Slider from 'rc-slider';
+import {handleRender} from './TooltipSlider'
 
-const { createSliderWithTooltip } = Slider;
-const Range = createSliderWithTooltip(Slider.Range);
-const { Handle } = Slider;
-
-const handle = props => {
-  const { value, dragging, index, ...restProps } = props;
-  return (
-    <SliderTooltip
-      prefixCls='rc-slider-tooltip'
-      overlay={`$${value}`}
-      visible={dragging}
-      placement='top'
-      key={index}
-    >
-      <Handle value={value} {...restProps} />
-    </SliderTooltip>
-  );
-};
 
 class RangeSlider extends React.Component {
   constructor(props) {
@@ -75,7 +58,7 @@ class RangeSlider extends React.Component {
             onAfterChange={this.onAfterSliderChange}
           />
         ) : (
-          <Range
+          <Slider range
             className='slider'
             pushable={10}
             allowCross={allowCross}
@@ -84,7 +67,7 @@ class RangeSlider extends React.Component {
             step={step}
             defaultValue={defaultValue}
             marks={marks}
-            handle={handle}
+            handleRender={handleRender}
             tipFormatter={value => `$${value}`}
             value={rangeValue}
             onChange={this.onRangeChange}
