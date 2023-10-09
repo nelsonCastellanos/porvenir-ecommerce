@@ -36,15 +36,23 @@ class Homepage extends React.PureComponent {
             </div>
           </Col>
           <Col xs='12' lg='12' className='order-lg-1 mb-3 px-3 px-md-2'>
-            <div className='d-flex flex-column h-100 justify-content-between'>
-              <img src='https://elporvenir-ecommerce-content.s3.amazonaws.com/home/banner-2.jpeg' className='mb-3' />
-              <img src='https://elporvenir-ecommerce-content.s3.amazonaws.com/home/banner-5.jpeg' />
+            <div className='row justify-content-between'>
+              <div className='col-md-9'>
+                <img src='https://elporvenir-ecommerce-content.s3.amazonaws.com/home/banner-2.jpeg' className='mb-3' />
+              </div>
+              <div className='col-md-3'>
+                <img src='https://elporvenir-ecommerce-content.s3.amazonaws.com/home/banner-5.jpeg' />
+              </div>
             </div>
           </Col>
           <Col xs='12' lg='12' className='order-lg-3 mb-3 px-3 px-md-2'>
-            <div className='d-flex flex-column h-100 justify-content-between'>
-              <img src='https://elporvenir-ecommerce-content.s3.amazonaws.com/home/banner-2.jpeg' className='mb-3' />
-              <img src='https://elporvenir-ecommerce-content.s3.amazonaws.com/home/banner-6.jpeg' />
+            <div className='row justify-content-between'>
+              <div className='col-md-6'>
+                <img src='https://elporvenir-ecommerce-content.s3.amazonaws.com/home/banner-2.jpeg' className='mb-3' />
+              </div>
+              <div className='col-md-6'>
+                <img src='https://elporvenir-ecommerce-content.s3.amazonaws.com/home/banner-6.jpeg' />
+              </div>
             </div>
           </Col>
         </Row>
