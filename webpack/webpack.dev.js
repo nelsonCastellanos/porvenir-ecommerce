@@ -1,6 +1,6 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const webpackMerge = require('webpack-merge');
+const { merge } = require('webpack-merge');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 const common = require('./webpack.common');
@@ -91,4 +91,4 @@ const config = {
   devtool: 'eval-source-map'
 };
 
-module.exports = webpackMerge(common, config);
+module.exports = merge(common, config);

@@ -4,7 +4,7 @@ const TerserPlugin = require('terser-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const WebpackPwaManifest = require('webpack-pwa-manifest');
-const webpackMerge = require('webpack-merge');
+const { merge } = require('webpack-merge');
 
 const common = require('./webpack.common');
 
@@ -163,4 +163,4 @@ const config = {
   ]
 };
 
-module.exports = webpackMerge(common, config);
+module.exports = merge(common, config);
