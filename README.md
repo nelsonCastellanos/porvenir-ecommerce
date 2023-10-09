@@ -186,3 +186,6 @@ For load testing purposes, you can leverage JMeter to simulate multiple users an
 ```bash
 jmeter -n -t docs/loadtest.jmx -l docs/log.jtl -e -o docs/report/
 ``````
+
+Results:
+https://nelsoncastellanos.github.io/porvenir-ecommerce/report/index.html
