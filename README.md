@@ -154,3 +154,31 @@ Here is a fundamental set of steps to push a Docker image to Amazon's Elastic Co
    docker push your-account-id.dkr.ecr.us-east-1.amazonaws.com/porvenir-ecommerce:v1.0.0
    ```
    This command will push your Docker image to the specified repository in ECR.
+
+## JMETER
+
+If you encounter the message stating that your attempt to securely connect to www.google.com is being hindered by "_ JMeter Root CA for recording (INSTALL ONLY IF IT'S YOURS)," it is because JMeter has installed its own Certificate Authority (CA) on your system, and Firefox is detecting this CA as a potential security threat. To resolve this issue and allow JMeter to function correctly with Firefox, you can follow these steps:
+
+1. Confirm the source of "_ JMeter Root CA for recording": Ensure that the "_ JMeter Root CA for recording" certificate is legitimate and originates from the JMeter installation you performed or a trusted source. If you did not install JMeter or do not recognize this CA, it may be a security concern.
+
+2. Add the JMeter CA to Firefox's exceptions:
+
+   - Open Firefox, click the "Menu" (the three horizontal lines in the upper right corner), and select "Options."
+   - In the left sidebar, click on "Privacy & Security."
+   - Scroll down to find the "Certificates" section and click on "View Certificates."
+   - Go to the "Authorities" tab and look for "_ JMeter Root CA for recording."
+   - Click on "_ JMeter Root CA for recording," and then click "Edit Trust."
+   - Check the box that says "This certificate can identify websites" and click "OK."
+   - Restart Firefox: Close and reopen Firefox to apply the changes.
+
+3. Try again with JMeter: You should now be able to use JMeter to conduct secure tests on www.google.com without receiving the error message.
+
+If you are using Homebrew and need to locate the file containing the certificate in your JMeter installation, it may appear as follows:
+
+```bash
+ln -s /usr/local/Cellar/jmeter /Users/ncastellanos/jmeter
+```
+
+## Load Testing
+
+For load testing purposes, you can leverage JMeter to simulate multiple users and analyze the performance of your web applications. JMeter allows you to conduct various load testing scenarios, monitor server response times, and assess the scalability of your system. To get started with load testing using JMeter, refer to the official documentation and tutorials available on the [Apache JMeter website](https://jmeter.apache.org/).
