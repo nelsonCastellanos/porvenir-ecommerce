@@ -1,444 +1,157 @@
-2023-10-10 21:34:36,055 INFO o.a.j.u.JMeterUtils: Setting Locale to en_EN
-2023-10-10 21:34:36,082 INFO o.a.j.JMeter: Loading user properties from: /usr/local/Cellar/jmeter/5.6.2/libexec/bin/user.properties
-2023-10-10 21:34:36,083 INFO o.a.j.JMeter: Loading system properties from: /usr/local/Cellar/jmeter/5.6.2/libexec/bin/system.properties
-2023-10-10 21:34:36,090 INFO o.a.j.JMeter: Copyright (c) 1998-2023 The Apache Software Foundation
-2023-10-10 21:34:36,090 INFO o.a.j.JMeter: Version 5.6.2
-2023-10-10 21:34:36,090 INFO o.a.j.JMeter: java.version=17.0.8.1
-2023-10-10 21:34:36,091 INFO o.a.j.JMeter: java.vm.name=OpenJDK 64-Bit Server VM
-2023-10-10 21:34:36,091 INFO o.a.j.JMeter: os.name=Mac OS X
-2023-10-10 21:34:36,091 INFO o.a.j.JMeter: os.arch=x86_64
-2023-10-10 21:34:36,091 INFO o.a.j.JMeter: os.version=13.1
-2023-10-10 21:34:36,091 INFO o.a.j.JMeter: file.encoding=UTF-8
-2023-10-10 21:34:36,091 INFO o.a.j.JMeter: java.awt.headless=true
-2023-10-10 21:34:36,091 INFO o.a.j.JMeter: Max memory     =1073741824
-2023-10-10 21:34:36,091 INFO o.a.j.JMeter: Available Processors =12
-2023-10-10 21:34:36,101 INFO o.a.j.JMeter: Default Locale=English (EN)
-2023-10-10 21:34:36,102 INFO o.a.j.JMeter: JMeter  Locale=English (EN)
-2023-10-10 21:34:36,102 INFO o.a.j.JMeter: JMeterHome=/usr/local/Cellar/jmeter/5.6.2/libexec
-2023-10-10 21:34:36,102 INFO o.a.j.JMeter: user.dir  =/Users/ncastellanos/porvenir-ecommerce
-2023-10-10 21:34:36,102 INFO o.a.j.JMeter: PWD       =/Users/ncastellanos/porvenir-ecommerce
-2023-10-10 21:34:36,113 INFO o.a.j.JMeter: IP: 192.168.1.34 Name: CO0C02FQD20MD6M FullName: 192.168.1.34
-2023-10-10 21:34:36,134 INFO o.a.j.JMeter: Setting property 'jmeter.reportgenerator.outputdir' to:'/Users/ncastellanos/porvenir-ecommerce/docs/report_20231010213434'
-2023-10-10 21:34:36,137 INFO o.a.j.s.FileServer: Default base='/Users/ncastellanos/porvenir-ecommerce'
-2023-10-10 21:34:36,139 INFO o.a.j.s.FileServer: Set new base='/Users/ncastellanos/porvenir-ecommerce/docs'
-2023-10-10 21:34:36,363 INFO o.a.j.s.SaveService: Testplan (JMX) version: 2.2. Testlog (JTL) version: 2.2
-2023-10-10 21:34:36,393 INFO o.a.j.s.SaveService: Using SaveService properties version 5.0
-2023-10-10 21:34:36,396 INFO o.a.j.s.SaveService: Using SaveService properties file encoding UTF-8
-2023-10-10 21:34:36,400 INFO o.a.j.s.SaveService: Loading file: docs/loadtest.jmx
-2023-10-10 21:34:36,462 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/html is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
-2023-10-10 21:34:36,462 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for application/xhtml+xml is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
-2023-10-10 21:34:36,462 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for application/xml is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
-2023-10-10 21:34:36,462 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/xml is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
-2023-10-10 21:34:36,463 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/vnd.wap.wml is org.apache.jmeter.protocol.http.parser.RegexpHTMLParser
-2023-10-10 21:34:36,463 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/css is org.apache.jmeter.protocol.http.parser.CssParser
-2023-10-10 21:34:36,794 INFO o.a.j.e.KeyToolUtils: keytool found at 'keytool'
-2023-10-10 21:34:36,794 INFO o.a.j.p.h.p.ProxyControl: HTTP(S) Test Script Recorder SSL Proxy will use keys that support embedded 3rd party resources in file /usr/local/Cellar/jmeter/5.6.2/libexec/bin/proxyserver.jks
-2023-10-10 21:34:36,827 INFO o.a.j.JMeter: Creating summariser <summary>
-2023-10-10 21:34:36,832 INFO o.a.j.r.d.ReportGenerator: ReportGenerator will use for Parsing the separator: ','
-2023-10-10 21:34:36,832 INFO o.a.j.r.d.ReportGenerator: Will generate report at end of test from  results file: docs/log_20231010213434.jtl
-2023-10-10 21:34:36,832 INFO o.a.j.r.d.ReportGenerator: Reading report generator properties from: /usr/local/Cellar/jmeter/5.6.2/libexec/bin/reportgenerator.properties
-2023-10-10 21:34:36,834 INFO o.a.j.r.d.ReportGenerator: Merging with JMeter properties
-2023-10-10 21:34:36,839 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.temp_dir' not found, using default value 'temp' instead.
-2023-10-10 21:34:36,842 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.apdex_per_transaction' not found, using default value 'null' instead.
-2023-10-10 21:34:36,842 INFO o.a.j.r.c.ReportGeneratorConfiguration: apdex_per_transaction is empty, not APDEX per transaction customization
-2023-10-10 21:34:36,842 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.sample_filter' not found, using default value 'null' instead.
-2023-10-10 21:34:36,842 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.report_title' not found, using default value 'null' instead.
-2023-10-10 21:34:36,842 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.start_date' not found, using default value 'null' instead.
-2023-10-10 21:34:36,842 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.end_date' not found, using default value 'null' instead.
-2023-10-10 21:34:36,842 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.date_format' not found, using default value 'null' instead.
-2023-10-10 21:34:36,843 INFO o.a.j.r.c.ReportGeneratorConfiguration: Will use date range start date: null, end date: null
-2023-10-10 21:34:36,847 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.graph.totalTPS.exclude_controllers' not found, using default value 'false' instead.
-2023-10-10 21:34:36,847 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.graph.activeThreadsOverTime.exclude_controllers' not found, using default value 'false' instead.
-2023-10-10 21:34:36,847 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.graph.timeVsThreads.exclude_controllers' not found, using default value 'false' instead.
-2023-10-10 21:34:36,848 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.graph.responseTimeDistribution.exclude_controllers' not found, using default value 'false' instead.
-2023-10-10 21:34:36,848 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.graph.transactionsPerSecond.exclude_controllers' not found, using default value 'false' instead.
-2023-10-10 21:34:36,848 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.graph.responseTimePercentiles.exclude_controllers' not found, using default value 'false' instead.
-2023-10-10 21:34:36,848 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.graph.responseTimePercentilesOverTime.exclude_controllers' not found, using default value 'false' instead.
-2023-10-10 21:34:36,849 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.graph.responseTimesOverTime.exclude_controllers' not found, using default value 'false' instead.
-2023-10-10 21:34:36,849 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.graph.connectTimeOverTime.exclude_controllers' not found, using default value 'false' instead.
-2023-10-10 21:34:36,849 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.graph.latenciesOverTime.exclude_controllers' not found, using default value 'false' instead.
-2023-10-10 21:34:36,850 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.exporter.json.filters_only_sample_series' not found, using default value 'true' instead.
-2023-10-10 21:34:36,850 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.exporter.json.series_filter' not found, using default value '' instead.
-2023-10-10 21:34:36,850 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.exporter.json.show_controllers_only' not found, using default value 'false' instead.
-2023-10-10 21:34:36,851 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.exporter.html.filters_only_sample_series' not found, using default value 'true' instead.
-2023-10-10 21:34:36,851 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.exporter.html.series_filter' not found, using default value '' instead.
-2023-10-10 21:34:36,851 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.exporter.html.show_controllers_only' not found, using default value 'false' instead.
-2023-10-10 21:34:36,864 INFO o.a.j.e.StandardJMeterEngine: Running the test!
-2023-10-10 21:34:36,865 INFO o.a.j.s.SampleEvent: List of sample_variables: []
-2023-10-10 21:34:36,865 INFO o.a.j.s.SampleEvent: List of sample_variables: []
-2023-10-10 21:34:36,871 INFO o.a.j.e.u.CompoundVariable: Note: Function class names must contain the string: '.functions.'
-2023-10-10 21:34:36,872 INFO o.a.j.e.u.CompoundVariable: Note: Function class names must not contain the string: '.gui.'
-2023-10-10 21:34:36,947 INFO o.a.j.r.ClassFinder: Will scan jar /usr/local/Cellar/jmeter/5.6.2/libexec/lib/ext/jmeter-plugins-manager-1.10.jar with filter ExtendsClassFilter [parents=[interface org.apache.jmeter.functions.Function], inner=false, contains=null, notContains=null]. Consider exposing JMeter plugins via META-INF/services, and add JMeter-Skip-Class-Scanning=true manifest attribute so JMeter can skip classfile scanning
-2023-10-10 21:34:37,081 INFO o.a.j.JMeter: Running test (1696991677081)
-2023-10-10 21:34:37,110 INFO o.a.j.e.StandardJMeterEngine: Starting ThreadGroup: 1 : Thread Group
-2023-10-10 21:34:37,111 INFO o.a.j.e.StandardJMeterEngine: Starting 100 threads for group Thread Group.
-2023-10-10 21:34:37,111 INFO o.a.j.e.StandardJMeterEngine: Thread will continue on error
-2023-10-10 21:34:37,111 INFO o.a.j.t.ThreadGroup: Starting thread group... number=1 threads=100 ramp-up=3 delayedStart=true
-2023-10-10 21:34:37,112 INFO o.a.j.t.ThreadGroup: Started thread group number 1
-2023-10-10 21:34:37,112 INFO o.a.j.e.StandardJMeterEngine: All thread groups have been started
-2023-10-10 21:34:37,144 INFO o.a.j.t.JMeterThread: Thread started: Thread Group 1-1
-2023-10-10 21:34:37,165 INFO o.a.j.p.h.s.HTTPHCAbstractImpl: Local host = CO0C02FQD20MD6M
-2023-10-10 21:34:37,173 INFO o.a.j.t.JMeterThread: Thread started: Thread Group 1-2
-2023-10-10 21:34:37,173 INFO o.a.j.p.h.s.HTTPHC4Impl: HTTP request retry count = 0
-2023-10-10 21:34:37,175 INFO o.a.j.s.SampleResult: Note: Sample TimeStamps are START times
-2023-10-10 21:34:37,175 INFO o.a.j.s.SampleResult: sampleresult.default.encoding is set to UTF-8
-2023-10-10 21:34:37,175 INFO o.a.j.s.SampleResult: sampleresult.useNanoTime=true
-2023-10-10 21:34:37,175 INFO o.a.j.s.SampleResult: sampleresult.nanoThreadSleep=5000
-2023-10-10 21:34:37,207 INFO o.a.j.t.JMeterThread: Thread started: Thread Group 1-3
-2023-10-10 21:34:37,248 INFO o.a.j.t.JMeterThread: Thread started: Thread Group 1-4
-2023-10-10 21:34:37,285 INFO o.a.j.t.JMeterThread: Thread started: Thread Group 1-5
-2023-10-10 21:34:37,294 INFO o.a.j.p.h.s.h.LazyLayeredConnectionSocketFactory: Setting up HTTPS TrustAll Socket Factory
-2023-10-10 21:34:37,300 INFO o.a.j.u.JsseSSLManager: Using default SSL protocol: TLS
-2023-10-10 21:34:37,300 INFO o.a.j.u.JsseSSLManager: SSL session context: per-thread
-2023-10-10 21:34:37,320 INFO o.a.j.t.JMeterThread: Thread started: Thread Group 1-6
-2023-10-10 21:34:37,355 INFO o.a.j.t.JMeterThread: Thread started: Thread Group 1-7
-2023-10-10 21:34:37,392 INFO o.a.j.t.JMeterThread: Thread started: Thread Group 1-8
-2023-10-10 21:34:37,428 INFO o.a.j.t.JMeterThread: Thread started: Thread Group 1-9
-2023-10-10 21:34:37,463 INFO o.a.j.t.JMeterThread: Thread started: Thread Group 1-10
-2023-10-10 21:34:37,464 INFO o.a.j.u.SSLManager: JmeterKeyStore Location:  type JKS
-2023-10-10 21:34:37,468 INFO o.a.j.u.SSLManager: KeyStore created OK
-2023-10-10 21:34:37,468 WARN o.a.j.u.SSLManager: Keystore file not found, loading empty keystore
-2023-10-10 21:34:37,501 INFO o.a.j.t.JMeterThread: Thread started: Thread Group 1-11
-2023-10-10 21:34:37,537 INFO o.a.j.t.JMeterThread: Thread started: Thread Group 1-12
-2023-10-10 21:34:37,573 INFO o.a.j.t.JMeterThread: Thread started: Thread Group 1-13
-2023-10-10 21:34:37,638 INFO o.a.j.t.JMeterThread: Thread started: Thread Group 1-14
-2023-10-10 21:34:37,662 INFO o.a.j.t.JMeterThread: Thread started: Thread Group 1-15
-2023-10-10 21:34:37,693 INFO o.a.j.t.JMeterThread: Thread started: Thread Group 1-16
-2023-10-10 21:34:37,727 INFO o.a.j.t.JMeterThread: Thread started: Thread Group 1-17
-2023-10-10 21:34:37,769 INFO o.a.j.t.JMeterThread: Thread started: Thread Group 1-18
-2023-10-10 21:34:37,806 INFO o.a.j.t.JMeterThread: Thread started: Thread Group 1-19
-2023-10-10 21:34:37,834 INFO o.a.j.t.JMeterThread: Thread started: Thread Group 1-20
-2023-10-10 21:34:37,865 INFO o.a.j.t.JMeterThread: Thread started: Thread Group 1-21
-2023-10-10 21:34:37,903 INFO o.a.j.t.JMeterThread: Thread started: Thread Group 1-22
-2023-10-10 21:34:37,937 INFO o.a.j.t.JMeterThread: Thread started: Thread Group 1-23
-2023-10-10 21:34:37,968 INFO o.a.j.t.JMeterThread: Thread started: Thread Group 1-24
-2023-10-10 21:34:37,999 INFO o.a.j.t.JMeterThread: Thread started: Thread Group 1-25
-2023-10-10 21:34:38,029 INFO o.a.j.t.JMeterThread: Thread started: Thread Group 1-26
-2023-10-10 21:34:38,067 INFO o.a.j.t.JMeterThread: Thread started: Thread Group 1-27
-2023-10-10 21:34:38,118 INFO o.a.j.t.JMeterThread: Thread started: Thread Group 1-28
-2023-10-10 21:34:38,134 INFO o.a.j.t.JMeterThread: Thread started: Thread Group 1-29
-2023-10-10 21:34:38,170 INFO o.a.j.t.JMeterThread: Thread started: Thread Group 1-30
-2023-10-10 21:34:38,203 INFO o.a.j.t.JMeterThread: Thread started: Thread Group 1-31
-2023-10-10 21:34:38,236 INFO o.a.j.t.JMeterThread: Thread started: Thread Group 1-32
-2023-10-10 21:34:38,271 INFO o.a.j.t.JMeterThread: Thread started: Thread Group 1-33
-2023-10-10 21:34:38,306 INFO o.a.j.t.JMeterThread: Thread started: Thread Group 1-34
-2023-10-10 21:34:38,338 INFO o.a.j.t.JMeterThread: Thread started: Thread Group 1-35
-2023-10-10 21:34:38,368 INFO o.a.j.t.JMeterThread: Thread started: Thread Group 1-36
-2023-10-10 21:34:38,400 INFO o.a.j.t.JMeterThread: Thread started: Thread Group 1-37
-2023-10-10 21:34:38,436 INFO o.a.j.t.JMeterThread: Thread started: Thread Group 1-38
-2023-10-10 21:34:38,470 INFO o.a.j.t.JMeterThread: Thread started: Thread Group 1-39
-2023-10-10 21:34:38,504 INFO o.a.j.t.JMeterThread: Thread started: Thread Group 1-40
-2023-10-10 21:34:38,537 INFO o.a.j.t.JMeterThread: Thread started: Thread Group 1-41
-2023-10-10 21:34:38,569 INFO o.a.j.t.JMeterThread: Thread started: Thread Group 1-42
-2023-10-10 21:34:38,603 INFO o.a.j.t.JMeterThread: Thread started: Thread Group 1-43
-2023-10-10 21:34:38,654 INFO o.a.j.t.JMeterThread: Thread started: Thread Group 1-44
-2023-10-10 21:34:38,667 INFO o.a.j.t.JMeterThread: Thread started: Thread Group 1-45
-2023-10-10 21:34:38,697 INFO o.a.j.t.JMeterThread: Thread started: Thread Group 1-46
-2023-10-10 21:34:38,727 INFO o.a.j.t.JMeterThread: Thread started: Thread Group 1-47
-2023-10-10 21:34:38,759 INFO o.a.j.t.JMeterThread: Thread started: Thread Group 1-48
-2023-10-10 21:34:38,789 INFO o.a.j.t.JMeterThread: Thread started: Thread Group 1-49
-2023-10-10 21:34:38,819 INFO o.a.j.t.JMeterThread: Thread started: Thread Group 1-50
-2023-10-10 21:34:38,848 INFO o.a.j.t.JMeterThread: Thread started: Thread Group 1-51
-2023-10-10 21:34:38,877 INFO o.a.j.t.JMeterThread: Thread started: Thread Group 1-52
-2023-10-10 21:34:38,909 INFO o.a.j.t.JMeterThread: Thread started: Thread Group 1-53
-2023-10-10 21:34:38,941 INFO o.a.j.t.JMeterThread: Thread started: Thread Group 1-54
-2023-10-10 21:34:38,975 INFO o.a.j.t.JMeterThread: Thread started: Thread Group 1-55
-2023-10-10 21:34:39,003 INFO o.a.j.t.JMeterThread: Thread started: Thread Group 1-56
-2023-10-10 21:34:39,034 INFO o.a.j.t.JMeterThread: Thread started: Thread Group 1-57
-2023-10-10 21:34:39,064 INFO o.a.j.t.JMeterThread: Thread started: Thread Group 1-58
-2023-10-10 21:34:39,092 INFO o.a.j.t.JMeterThread: Thread started: Thread Group 1-59
-2023-10-10 21:34:39,138 INFO o.a.j.t.JMeterThread: Thread started: Thread Group 1-60
-2023-10-10 21:34:39,149 INFO o.a.j.t.JMeterThread: Thread started: Thread Group 1-61
-2023-10-10 21:34:39,177 INFO o.a.j.t.JMeterThread: Thread started: Thread Group 1-62
-2023-10-10 21:34:39,208 INFO o.a.j.t.JMeterThread: Thread started: Thread Group 1-63
-2023-10-10 21:34:39,238 INFO o.a.j.t.JMeterThread: Thread started: Thread Group 1-64
-2023-10-10 21:34:39,267 INFO o.a.j.t.JMeterThread: Thread started: Thread Group 1-65
-2023-10-10 21:34:39,295 INFO o.a.j.t.JMeterThread: Thread started: Thread Group 1-66
-2023-10-10 21:34:39,325 INFO o.a.j.t.JMeterThread: Thread started: Thread Group 1-67
-2023-10-10 21:34:39,352 INFO o.a.j.t.JMeterThread: Thread started: Thread Group 1-68
-2023-10-10 21:34:39,380 INFO o.a.j.t.JMeterThread: Thread started: Thread Group 1-69
-2023-10-10 21:34:39,409 INFO o.a.j.t.JMeterThread: Thread started: Thread Group 1-70
-2023-10-10 21:34:39,436 INFO o.a.j.t.JMeterThread: Thread started: Thread Group 1-71
-2023-10-10 21:34:39,467 INFO o.a.j.t.JMeterThread: Thread started: Thread Group 1-72
-2023-10-10 21:34:39,495 INFO o.a.j.t.JMeterThread: Thread started: Thread Group 1-73
-2023-10-10 21:34:39,526 INFO o.a.j.t.JMeterThread: Thread started: Thread Group 1-74
-2023-10-10 21:34:39,556 INFO o.a.j.t.JMeterThread: Thread started: Thread Group 1-75
-2023-10-10 21:34:39,584 INFO o.a.j.t.JMeterThread: Thread started: Thread Group 1-76
-2023-10-10 21:34:39,614 INFO o.a.j.t.JMeterThread: Thread started: Thread Group 1-77
-2023-10-10 21:34:39,644 INFO o.a.j.t.JMeterThread: Thread started: Thread Group 1-78
-2023-10-10 21:34:39,677 INFO o.a.j.t.JMeterThread: Thread started: Thread Group 1-79
-2023-10-10 21:34:39,720 INFO o.a.j.t.JMeterThread: Thread started: Thread Group 1-80
-2023-10-10 21:34:39,743 INFO o.a.j.t.JMeterThread: Thread started: Thread Group 1-81
-2023-10-10 21:34:39,767 INFO o.a.j.t.JMeterThread: Thread started: Thread Group 1-82
-2023-10-10 21:34:39,791 INFO o.a.j.t.JMeterThread: Thread started: Thread Group 1-83
-2023-10-10 21:34:39,817 INFO o.a.j.t.JMeterThread: Thread started: Thread Group 1-84
-2023-10-10 21:34:39,838 INFO o.a.j.t.JMeterThread: Thread started: Thread Group 1-85
-2023-10-10 21:34:39,864 INFO o.a.j.t.JMeterThread: Thread started: Thread Group 1-86
-2023-10-10 21:34:39,889 INFO o.a.j.t.JMeterThread: Thread started: Thread Group 1-87
-2023-10-10 21:34:39,913 INFO o.a.j.t.JMeterThread: Thread started: Thread Group 1-88
-2023-10-10 21:34:39,932 INFO o.a.j.t.JMeterThread: Thread started: Thread Group 1-89
-2023-10-10 21:34:39,952 INFO o.a.j.t.JMeterThread: Thread started: Thread Group 1-90
-2023-10-10 21:34:39,974 INFO o.a.j.t.JMeterThread: Thread started: Thread Group 1-91
-2023-10-10 21:34:39,994 INFO o.a.j.t.JMeterThread: Thread started: Thread Group 1-92
-2023-10-10 21:34:40,013 INFO o.a.j.t.JMeterThread: Thread started: Thread Group 1-93
-2023-10-10 21:34:40,034 INFO o.a.j.t.JMeterThread: Thread started: Thread Group 1-94
-2023-10-10 21:34:40,053 INFO o.a.j.t.JMeterThread: Thread started: Thread Group 1-95
-2023-10-10 21:34:40,074 INFO o.a.j.t.JMeterThread: Thread started: Thread Group 1-96
-2023-10-10 21:34:40,089 INFO o.a.j.t.JMeterThread: Thread started: Thread Group 1-97
-2023-10-10 21:34:40,103 INFO o.a.j.t.JMeterThread: Thread started: Thread Group 1-98
-2023-10-10 21:34:40,116 INFO o.a.j.t.JMeterThread: Thread started: Thread Group 1-99
-2023-10-10 21:34:40,126 INFO o.a.j.t.JMeterThread: Thread started: Thread Group 1-100
-2023-10-10 21:35:00,003 INFO o.a.j.r.Summariser: summary +   1749 in 00:00:23 =   76.3/s Avg:   191 Min:    93 Max: 10119 Err:   263 (15.04%) Active: 100 Started: 100 Finished: 0
-2023-10-10 21:35:30,126 INFO o.a.j.r.Summariser: summary +   2406 in 00:00:30 =   79.9/s Avg:   191 Min:    92 Max: 10113 Err:    71 (2.95%) Active: 100 Started: 100 Finished: 0
-2023-10-10 21:35:30,126 INFO o.a.j.r.Summariser: summary =   4155 in 00:00:53 =   78.3/s Avg:   191 Min:    92 Max: 10119 Err:   334 (8.04%)
-2023-10-10 21:36:00,012 INFO o.a.j.r.Summariser: summary +   2436 in 00:00:30 =   81.5/s Avg:   181 Min:    96 Max: 10406 Err:     4 (0.16%) Active: 100 Started: 100 Finished: 0
-2023-10-10 21:36:00,013 INFO o.a.j.r.Summariser: summary =   6591 in 00:01:23 =   79.5/s Avg:   187 Min:    92 Max: 10406 Err:   338 (5.13%)
-2023-10-10 21:36:30,096 INFO o.a.j.r.Summariser: summary +   2332 in 00:00:30 =   77.5/s Avg:   227 Min:    96 Max: 10238 Err:    18 (0.77%) Active: 100 Started: 100 Finished: 0
-2023-10-10 21:36:30,097 INFO o.a.j.r.Summariser: summary =   8923 in 00:01:53 =   79.0/s Avg:   198 Min:    92 Max: 10406 Err:   356 (3.99%)
-2023-10-10 21:36:48,857 INFO o.a.j.t.JMeterThread: Thread is done: Thread Group 1-19
-2023-10-10 21:36:48,857 INFO o.a.j.t.JMeterThread: Thread finished: Thread Group 1-19
-2023-10-10 21:36:49,016 INFO o.a.j.t.JMeterThread: Thread is done: Thread Group 1-26
-2023-10-10 21:36:49,016 INFO o.a.j.t.JMeterThread: Thread finished: Thread Group 1-26
-2023-10-10 21:36:49,325 INFO o.a.j.t.JMeterThread: Thread is done: Thread Group 1-2
-2023-10-10 21:36:49,325 INFO o.a.j.t.JMeterThread: Thread finished: Thread Group 1-2
-2023-10-10 21:36:49,383 INFO o.a.j.t.JMeterThread: Thread is done: Thread Group 1-27
-2023-10-10 21:36:49,384 INFO o.a.j.t.JMeterThread: Thread finished: Thread Group 1-27
-2023-10-10 21:36:49,443 INFO o.a.j.t.JMeterThread: Thread is done: Thread Group 1-22
-2023-10-10 21:36:49,443 INFO o.a.j.t.JMeterThread: Thread finished: Thread Group 1-22
-2023-10-10 21:36:49,502 INFO o.a.j.t.JMeterThread: Thread is done: Thread Group 1-17
-2023-10-10 21:36:49,503 INFO o.a.j.t.JMeterThread: Thread finished: Thread Group 1-17
-2023-10-10 21:36:49,636 INFO o.a.j.t.JMeterThread: Thread is done: Thread Group 1-38
-2023-10-10 21:36:49,636 INFO o.a.j.t.JMeterThread: Thread finished: Thread Group 1-38
-2023-10-10 21:36:49,642 INFO o.a.j.t.JMeterThread: Thread is done: Thread Group 1-3
-2023-10-10 21:36:49,642 INFO o.a.j.t.JMeterThread: Thread finished: Thread Group 1-3
-2023-10-10 21:36:49,655 INFO o.a.j.t.JMeterThread: Thread is done: Thread Group 1-10
-2023-10-10 21:36:49,655 INFO o.a.j.t.JMeterThread: Thread finished: Thread Group 1-10
-2023-10-10 21:36:49,762 INFO o.a.j.t.JMeterThread: Thread is done: Thread Group 1-21
-2023-10-10 21:36:49,762 INFO o.a.j.t.JMeterThread: Thread finished: Thread Group 1-21
-2023-10-10 21:36:49,763 INFO o.a.j.t.JMeterThread: Thread is done: Thread Group 1-35
-2023-10-10 21:36:49,763 INFO o.a.j.t.JMeterThread: Thread finished: Thread Group 1-35
-2023-10-10 21:36:49,809 INFO o.a.j.t.JMeterThread: Thread is done: Thread Group 1-24
-2023-10-10 21:36:49,809 INFO o.a.j.t.JMeterThread: Thread is done: Thread Group 1-20
-2023-10-10 21:36:49,809 INFO o.a.j.t.JMeterThread: Thread finished: Thread Group 1-24
-2023-10-10 21:36:49,809 INFO o.a.j.t.JMeterThread: Thread finished: Thread Group 1-20
-2023-10-10 21:36:49,828 INFO o.a.j.t.JMeterThread: Thread is done: Thread Group 1-23
-2023-10-10 21:36:49,829 INFO o.a.j.t.JMeterThread: Thread finished: Thread Group 1-23
-2023-10-10 21:36:49,853 INFO o.a.j.t.JMeterThread: Thread is done: Thread Group 1-25
-2023-10-10 21:36:49,853 INFO o.a.j.t.JMeterThread: Thread is done: Thread Group 1-40
-2023-10-10 21:36:49,853 INFO o.a.j.t.JMeterThread: Thread finished: Thread Group 1-25
-2023-10-10 21:36:49,854 INFO o.a.j.t.JMeterThread: Thread finished: Thread Group 1-40
-2023-10-10 21:36:49,932 INFO o.a.j.t.JMeterThread: Thread is done: Thread Group 1-15
-2023-10-10 21:36:49,932 INFO o.a.j.t.JMeterThread: Thread finished: Thread Group 1-15
-2023-10-10 21:36:49,972 INFO o.a.j.t.JMeterThread: Thread is done: Thread Group 1-4
-2023-10-10 21:36:49,973 INFO o.a.j.t.JMeterThread: Thread finished: Thread Group 1-4
-2023-10-10 21:36:49,990 INFO o.a.j.t.JMeterThread: Thread is done: Thread Group 1-61
-2023-10-10 21:36:49,990 INFO o.a.j.t.JMeterThread: Thread finished: Thread Group 1-61
-2023-10-10 21:36:50,108 INFO o.a.j.t.JMeterThread: Thread is done: Thread Group 1-46
-2023-10-10 21:36:50,109 INFO o.a.j.t.JMeterThread: Thread finished: Thread Group 1-46
-2023-10-10 21:36:50,157 INFO o.a.j.t.JMeterThread: Thread is done: Thread Group 1-29
-2023-10-10 21:36:50,158 INFO o.a.j.t.JMeterThread: Thread finished: Thread Group 1-29
-2023-10-10 21:36:50,188 INFO o.a.j.t.JMeterThread: Thread is done: Thread Group 1-51
-2023-10-10 21:36:50,188 INFO o.a.j.t.JMeterThread: Thread finished: Thread Group 1-51
-2023-10-10 21:36:50,204 INFO o.a.j.t.JMeterThread: Thread is done: Thread Group 1-6
-2023-10-10 21:36:50,204 INFO o.a.j.t.JMeterThread: Thread finished: Thread Group 1-6
-2023-10-10 21:36:50,237 INFO o.a.j.t.JMeterThread: Thread is done: Thread Group 1-37
-2023-10-10 21:36:50,238 INFO o.a.j.t.JMeterThread: Thread finished: Thread Group 1-37
-2023-10-10 21:36:50,291 INFO o.a.j.t.JMeterThread: Thread is done: Thread Group 1-32
-2023-10-10 21:36:50,291 INFO o.a.j.t.JMeterThread: Thread finished: Thread Group 1-32
-2023-10-10 21:36:50,391 INFO o.a.j.t.JMeterThread: Thread is done: Thread Group 1-14
-2023-10-10 21:36:50,391 INFO o.a.j.t.JMeterThread: Thread finished: Thread Group 1-14
-2023-10-10 21:36:50,428 INFO o.a.j.t.JMeterThread: Thread is done: Thread Group 1-54
-2023-10-10 21:36:50,428 INFO o.a.j.t.JMeterThread: Thread finished: Thread Group 1-54
-2023-10-10 21:36:50,542 INFO o.a.j.t.JMeterThread: Thread is done: Thread Group 1-80
-2023-10-10 21:36:50,546 INFO o.a.j.t.JMeterThread: Thread finished: Thread Group 1-80
-2023-10-10 21:36:50,568 INFO o.a.j.t.JMeterThread: Thread is done: Thread Group 1-13
-2023-10-10 21:36:50,568 INFO o.a.j.t.JMeterThread: Thread finished: Thread Group 1-13
-2023-10-10 21:36:50,593 INFO o.a.j.t.JMeterThread: Thread is done: Thread Group 1-58
-2023-10-10 21:36:50,594 INFO o.a.j.t.JMeterThread: Thread finished: Thread Group 1-58
-2023-10-10 21:36:50,637 INFO o.a.j.t.JMeterThread: Thread is done: Thread Group 1-49
-2023-10-10 21:36:50,637 INFO o.a.j.t.JMeterThread: Thread finished: Thread Group 1-49
-2023-10-10 21:36:50,675 INFO o.a.j.t.JMeterThread: Thread is done: Thread Group 1-42
-2023-10-10 21:36:50,676 INFO o.a.j.t.JMeterThread: Thread finished: Thread Group 1-42
-2023-10-10 21:36:50,703 INFO o.a.j.t.JMeterThread: Thread is done: Thread Group 1-50
-2023-10-10 21:36:50,704 INFO o.a.j.t.JMeterThread: Thread finished: Thread Group 1-50
-2023-10-10 21:36:50,787 INFO o.a.j.t.JMeterThread: Thread is done: Thread Group 1-45
-2023-10-10 21:36:50,787 INFO o.a.j.t.JMeterThread: Thread finished: Thread Group 1-45
-2023-10-10 21:36:50,801 INFO o.a.j.t.JMeterThread: Thread is done: Thread Group 1-63
-2023-10-10 21:36:50,801 INFO o.a.j.t.JMeterThread: Thread finished: Thread Group 1-63
-2023-10-10 21:36:50,822 INFO o.a.j.t.JMeterThread: Thread is done: Thread Group 1-60
-2023-10-10 21:36:50,823 INFO o.a.j.t.JMeterThread: Thread finished: Thread Group 1-60
-2023-10-10 21:36:50,829 INFO o.a.j.t.JMeterThread: Thread is done: Thread Group 1-48
-2023-10-10 21:36:50,829 INFO o.a.j.t.JMeterThread: Thread finished: Thread Group 1-48
-2023-10-10 21:36:50,847 INFO o.a.j.t.JMeterThread: Thread is done: Thread Group 1-5
-2023-10-10 21:36:50,847 INFO o.a.j.t.JMeterThread: Thread is done: Thread Group 1-36
-2023-10-10 21:36:50,847 INFO o.a.j.t.JMeterThread: Thread finished: Thread Group 1-5
-2023-10-10 21:36:50,847 INFO o.a.j.t.JMeterThread: Thread finished: Thread Group 1-36
-2023-10-10 21:36:50,876 INFO o.a.j.t.JMeterThread: Thread is done: Thread Group 1-11
-2023-10-10 21:36:50,877 INFO o.a.j.t.JMeterThread: Thread finished: Thread Group 1-11
-2023-10-10 21:36:50,914 INFO o.a.j.t.JMeterThread: Thread is done: Thread Group 1-41
-2023-10-10 21:36:50,915 INFO o.a.j.t.JMeterThread: Thread finished: Thread Group 1-41
-2023-10-10 21:36:50,925 INFO o.a.j.t.JMeterThread: Thread is done: Thread Group 1-72
-2023-10-10 21:36:50,925 INFO o.a.j.t.JMeterThread: Thread finished: Thread Group 1-72
-2023-10-10 21:36:50,928 INFO o.a.j.t.JMeterThread: Thread is done: Thread Group 1-53
-2023-10-10 21:36:50,928 INFO o.a.j.t.JMeterThread: Thread finished: Thread Group 1-53
-2023-10-10 21:36:51,020 INFO o.a.j.t.JMeterThread: Thread is done: Thread Group 1-91
-2023-10-10 21:36:51,021 INFO o.a.j.t.JMeterThread: Thread finished: Thread Group 1-91
-2023-10-10 21:36:51,041 INFO o.a.j.t.JMeterThread: Thread is done: Thread Group 1-65
-2023-10-10 21:36:51,041 INFO o.a.j.t.JMeterThread: Thread finished: Thread Group 1-65
-2023-10-10 21:36:51,096 INFO o.a.j.t.JMeterThread: Thread is done: Thread Group 1-1
-2023-10-10 21:36:51,096 INFO o.a.j.t.JMeterThread: Thread finished: Thread Group 1-1
-2023-10-10 21:36:51,261 INFO o.a.j.t.JMeterThread: Thread is done: Thread Group 1-82
-2023-10-10 21:36:51,261 INFO o.a.j.t.JMeterThread: Thread finished: Thread Group 1-82
-2023-10-10 21:36:51,384 INFO o.a.j.t.JMeterThread: Thread is done: Thread Group 1-89
-2023-10-10 21:36:51,384 INFO o.a.j.t.JMeterThread: Thread finished: Thread Group 1-89
-2023-10-10 21:36:51,425 INFO o.a.j.t.JMeterThread: Thread is done: Thread Group 1-70
-2023-10-10 21:36:51,426 INFO o.a.j.t.JMeterThread: Thread finished: Thread Group 1-70
-2023-10-10 21:36:51,429 INFO o.a.j.t.JMeterThread: Thread is done: Thread Group 1-39
-2023-10-10 21:36:51,429 INFO o.a.j.t.JMeterThread: Thread finished: Thread Group 1-39
-2023-10-10 21:36:51,526 INFO o.a.j.t.JMeterThread: Thread is done: Thread Group 1-87
-2023-10-10 21:36:51,527 INFO o.a.j.t.JMeterThread: Thread finished: Thread Group 1-87
-2023-10-10 21:36:51,534 INFO o.a.j.t.JMeterThread: Thread is done: Thread Group 1-85
-2023-10-10 21:36:51,534 INFO o.a.j.t.JMeterThread: Thread finished: Thread Group 1-85
-2023-10-10 21:36:51,545 INFO o.a.j.t.JMeterThread: Thread is done: Thread Group 1-34
-2023-10-10 21:36:51,545 INFO o.a.j.t.JMeterThread: Thread finished: Thread Group 1-34
-2023-10-10 21:36:51,557 INFO o.a.j.t.JMeterThread: Thread is done: Thread Group 1-59
-2023-10-10 21:36:51,557 INFO o.a.j.t.JMeterThread: Thread finished: Thread Group 1-59
-2023-10-10 21:36:51,576 INFO o.a.j.t.JMeterThread: Thread is done: Thread Group 1-44
-2023-10-10 21:36:51,577 INFO o.a.j.t.JMeterThread: Thread finished: Thread Group 1-44
-2023-10-10 21:36:51,587 INFO o.a.j.t.JMeterThread: Thread is done: Thread Group 1-94
-2023-10-10 21:36:51,587 INFO o.a.j.t.JMeterThread: Thread is done: Thread Group 1-33
-2023-10-10 21:36:51,587 INFO o.a.j.t.JMeterThread: Thread finished: Thread Group 1-94
-2023-10-10 21:36:51,587 INFO o.a.j.t.JMeterThread: Thread finished: Thread Group 1-33
-2023-10-10 21:36:51,614 INFO o.a.j.t.JMeterThread: Thread is done: Thread Group 1-93
-2023-10-10 21:36:51,614 INFO o.a.j.t.JMeterThread: Thread finished: Thread Group 1-93
-2023-10-10 21:36:51,630 INFO o.a.j.t.JMeterThread: Thread is done: Thread Group 1-43
-2023-10-10 21:36:51,630 INFO o.a.j.t.JMeterThread: Thread is done: Thread Group 1-9
-2023-10-10 21:36:51,631 INFO o.a.j.t.JMeterThread: Thread finished: Thread Group 1-43
-2023-10-10 21:36:51,631 INFO o.a.j.t.JMeterThread: Thread finished: Thread Group 1-9
-2023-10-10 21:36:51,655 INFO o.a.j.t.JMeterThread: Thread is done: Thread Group 1-77
-2023-10-10 21:36:51,655 INFO o.a.j.t.JMeterThread: Thread finished: Thread Group 1-77
-2023-10-10 21:36:51,666 INFO o.a.j.t.JMeterThread: Thread is done: Thread Group 1-16
-2023-10-10 21:36:51,666 INFO o.a.j.t.JMeterThread: Thread finished: Thread Group 1-16
-2023-10-10 21:36:51,697 INFO o.a.j.t.JMeterThread: Thread is done: Thread Group 1-56
-2023-10-10 21:36:51,697 INFO o.a.j.t.JMeterThread: Thread finished: Thread Group 1-56
-2023-10-10 21:36:51,803 INFO o.a.j.t.JMeterThread: Thread is done: Thread Group 1-55
-2023-10-10 21:36:51,803 INFO o.a.j.t.JMeterThread: Thread finished: Thread Group 1-55
-2023-10-10 21:36:51,823 INFO o.a.j.t.JMeterThread: Thread is done: Thread Group 1-31
-2023-10-10 21:36:51,824 INFO o.a.j.t.JMeterThread: Thread finished: Thread Group 1-31
-2023-10-10 21:36:51,868 INFO o.a.j.t.JMeterThread: Thread is done: Thread Group 1-28
-2023-10-10 21:36:51,868 INFO o.a.j.t.JMeterThread: Thread finished: Thread Group 1-28
-2023-10-10 21:36:51,881 INFO o.a.j.t.JMeterThread: Thread is done: Thread Group 1-47
-2023-10-10 21:36:51,898 INFO o.a.j.t.JMeterThread: Thread finished: Thread Group 1-47
-2023-10-10 21:36:51,902 INFO o.a.j.t.JMeterThread: Thread is done: Thread Group 1-52
-2023-10-10 21:36:51,902 INFO o.a.j.t.JMeterThread: Thread finished: Thread Group 1-52
-2023-10-10 21:36:51,909 INFO o.a.j.t.JMeterThread: Thread is done: Thread Group 1-83
-2023-10-10 21:36:51,910 INFO o.a.j.t.JMeterThread: Thread finished: Thread Group 1-83
-2023-10-10 21:36:51,937 INFO o.a.j.t.JMeterThread: Thread is done: Thread Group 1-66
-2023-10-10 21:36:51,938 INFO o.a.j.t.JMeterThread: Thread finished: Thread Group 1-66
-2023-10-10 21:36:51,986 INFO o.a.j.t.JMeterThread: Thread is done: Thread Group 1-76
-2023-10-10 21:36:51,986 INFO o.a.j.t.JMeterThread: Thread finished: Thread Group 1-76
-2023-10-10 21:36:52,075 INFO o.a.j.t.JMeterThread: Thread is done: Thread Group 1-71
-2023-10-10 21:36:52,076 INFO o.a.j.t.JMeterThread: Thread finished: Thread Group 1-71
-2023-10-10 21:36:52,115 INFO o.a.j.t.JMeterThread: Thread is done: Thread Group 1-99
-2023-10-10 21:36:52,115 INFO o.a.j.t.JMeterThread: Thread finished: Thread Group 1-99
-2023-10-10 21:36:52,117 INFO o.a.j.t.JMeterThread: Thread is done: Thread Group 1-92
-2023-10-10 21:36:52,117 INFO o.a.j.t.JMeterThread: Thread finished: Thread Group 1-92
-2023-10-10 21:36:52,171 INFO o.a.j.t.JMeterThread: Thread is done: Thread Group 1-81
-2023-10-10 21:36:52,171 INFO o.a.j.t.JMeterThread: Thread finished: Thread Group 1-81
-2023-10-10 21:36:52,245 INFO o.a.j.t.JMeterThread: Thread is done: Thread Group 1-57
-2023-10-10 21:36:52,246 INFO o.a.j.t.JMeterThread: Thread finished: Thread Group 1-57
-2023-10-10 21:36:52,261 INFO o.a.j.t.JMeterThread: Thread is done: Thread Group 1-78
-2023-10-10 21:36:52,262 INFO o.a.j.t.JMeterThread: Thread finished: Thread Group 1-78
-2023-10-10 21:36:52,263 INFO o.a.j.t.JMeterThread: Thread is done: Thread Group 1-79
-2023-10-10 21:36:52,263 INFO o.a.j.t.JMeterThread: Thread finished: Thread Group 1-79
-2023-10-10 21:36:52,294 INFO o.a.j.t.JMeterThread: Thread is done: Thread Group 1-75
-2023-10-10 21:36:52,295 INFO o.a.j.t.JMeterThread: Thread finished: Thread Group 1-75
-2023-10-10 21:36:52,296 INFO o.a.j.t.JMeterThread: Thread is done: Thread Group 1-84
-2023-10-10 21:36:52,297 INFO o.a.j.t.JMeterThread: Thread finished: Thread Group 1-84
-2023-10-10 21:36:52,393 INFO o.a.j.t.JMeterThread: Thread is done: Thread Group 1-90
-2023-10-10 21:36:52,393 INFO o.a.j.t.JMeterThread: Thread finished: Thread Group 1-90
-2023-10-10 21:36:52,445 INFO o.a.j.t.JMeterThread: Thread is done: Thread Group 1-86
-2023-10-10 21:36:52,446 INFO o.a.j.t.JMeterThread: Thread finished: Thread Group 1-86
-2023-10-10 21:36:52,462 INFO o.a.j.t.JMeterThread: Thread is done: Thread Group 1-98
-2023-10-10 21:36:52,462 INFO o.a.j.t.JMeterThread: Thread finished: Thread Group 1-98
-2023-10-10 21:36:52,506 INFO o.a.j.t.JMeterThread: Thread is done: Thread Group 1-68
-2023-10-10 21:36:52,506 INFO o.a.j.t.JMeterThread: Thread finished: Thread Group 1-68
-2023-10-10 21:36:52,621 INFO o.a.j.t.JMeterThread: Thread is done: Thread Group 1-74
-2023-10-10 21:36:52,621 INFO o.a.j.t.JMeterThread: Thread finished: Thread Group 1-74
-2023-10-10 21:36:52,691 INFO o.a.j.t.JMeterThread: Thread is done: Thread Group 1-73
-2023-10-10 21:36:52,692 INFO o.a.j.t.JMeterThread: Thread finished: Thread Group 1-73
-2023-10-10 21:36:52,717 INFO o.a.j.t.JMeterThread: Thread is done: Thread Group 1-95
-2023-10-10 21:36:52,717 INFO o.a.j.t.JMeterThread: Thread finished: Thread Group 1-95
-2023-10-10 21:36:52,930 INFO o.a.j.t.JMeterThread: Thread is done: Thread Group 1-69
-2023-10-10 21:36:52,930 INFO o.a.j.t.JMeterThread: Thread finished: Thread Group 1-69
-2023-10-10 21:36:53,206 INFO o.a.j.t.JMeterThread: Thread is done: Thread Group 1-97
-2023-10-10 21:36:53,207 INFO o.a.j.t.JMeterThread: Thread finished: Thread Group 1-97
-2023-10-10 21:36:53,232 INFO o.a.j.t.JMeterThread: Thread is done: Thread Group 1-8
-2023-10-10 21:36:53,232 INFO o.a.j.t.JMeterThread: Thread finished: Thread Group 1-8
-2023-10-10 21:36:53,315 INFO o.a.j.t.JMeterThread: Thread is done: Thread Group 1-67
-2023-10-10 21:36:53,333 INFO o.a.j.t.JMeterThread: Thread finished: Thread Group 1-67
-2023-10-10 21:36:53,555 INFO o.a.j.t.JMeterThread: Thread is done: Thread Group 1-88
-2023-10-10 21:36:53,555 INFO o.a.j.t.JMeterThread: Thread finished: Thread Group 1-88
-2023-10-10 21:37:00,220 INFO o.a.j.r.Summariser: summary +   1735 in 00:00:30 =   57.6/s Avg:   194 Min:    97 Max: 10113 Err:    19 (1.10%) Active: 8 Started: 100 Finished: 92
-2023-10-10 21:37:00,221 INFO o.a.j.r.Summariser: summary =  10658 in 00:02:23 =   74.5/s Avg:   197 Min:    92 Max: 10406 Err:   375 (3.52%)
-2023-10-10 21:37:00,553 INFO o.a.j.t.JMeterThread: Thread is done: Thread Group 1-18
-2023-10-10 21:37:00,553 INFO o.a.j.t.JMeterThread: Thread finished: Thread Group 1-18
-2023-10-10 21:37:01,997 INFO o.a.j.t.JMeterThread: Thread is done: Thread Group 1-62
-2023-10-10 21:37:01,997 INFO o.a.j.t.JMeterThread: Thread finished: Thread Group 1-62
-2023-10-10 21:37:02,139 INFO o.a.j.t.JMeterThread: Thread is done: Thread Group 1-96
-2023-10-10 21:37:02,139 INFO o.a.j.t.JMeterThread: Thread finished: Thread Group 1-96
-2023-10-10 21:37:02,440 INFO o.a.j.t.JMeterThread: Thread is done: Thread Group 1-100
-2023-10-10 21:37:02,440 INFO o.a.j.t.JMeterThread: Thread finished: Thread Group 1-100
-2023-10-10 21:37:09,238 INFO o.a.j.t.JMeterThread: Thread is done: Thread Group 1-12
-2023-10-10 21:37:09,238 INFO o.a.j.t.JMeterThread: Thread finished: Thread Group 1-12
-2023-10-10 21:37:09,381 INFO o.a.j.t.JMeterThread: Thread is done: Thread Group 1-30
-2023-10-10 21:37:09,381 INFO o.a.j.t.JMeterThread: Thread finished: Thread Group 1-30
-2023-10-10 21:37:28,892 INFO o.a.j.t.JMeterThread: Thread is done: Thread Group 1-7
-2023-10-10 21:37:28,892 INFO o.a.j.t.JMeterThread: Thread finished: Thread Group 1-7
-2023-10-10 21:37:30,775 INFO o.a.j.t.JMeterThread: Thread is done: Thread Group 1-64
-2023-10-10 21:37:30,775 INFO o.a.j.t.JMeterThread: Thread finished: Thread Group 1-64
-2023-10-10 21:37:30,777 INFO o.a.j.e.StandardJMeterEngine: Notifying test listeners of end of test
-2023-10-10 21:37:30,778 INFO o.a.j.r.Summariser: summary +     42 in 00:00:31 =    1.4/s Avg:   867 Min:   104 Max: 10121 Err:     3 (7.14%) Active: 0 Started: 100 Finished: 100
-2023-10-10 21:37:30,778 INFO o.a.j.r.Summariser: summary =  10700 in 00:02:54 =   61.6/s Avg:   200 Min:    92 Max: 10406 Err:   378 (3.53%)
-2023-10-10 21:37:30,779 INFO o.a.j.JMeter: Generating Dashboard
-2023-10-10 21:37:30,779 INFO o.a.j.r.d.ReportGenerator: Flushing result collector before report Generation
-2023-10-10 21:37:30,790 INFO o.a.j.r.p.NormalizerSampleConsumer: Using format, 'ms', to parse timeStamp field
-2023-10-10 21:37:31,376 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.AggregateConsumer#stopProducing(): beginDate produced 0 samples
-2023-10-10 21:37:31,376 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.AggregateConsumer#stopProducing(): endDate produced 0 samples
-2023-10-10 21:37:31,379 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.ApdexSummaryConsumer#stopProducing(): apdexSummary produced 0 samples
-2023-10-10 21:37:31,379 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.RequestsSummaryConsumer#stopProducing(): requestsSummary produced 0 samples
-2023-10-10 21:37:31,397 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.StatisticsSummaryConsumer#stopProducing(): statisticsSummary produced 0 samples
-2023-10-10 21:37:31,401 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.Top5ErrorsBySamplerConsumer#stopProducing(): top5ErrorsBySampler produced 0 samples
-2023-10-10 21:37:31,401 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.ErrorsSummaryConsumer#stopProducing(): errorsSummary produced 0 samples
-2023-10-10 21:37:31,401 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.graph.impl.HitsPerSecondGraphConsumer#stopProducing(): hitsPerSecond produced 0 samples
-2023-10-10 21:37:31,597 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.graph.impl.LatencyVSRequestGraphConsumer#stopProducing(): latencyVsRequest produced 0 samples
-2023-10-10 21:37:31,599 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.graph.impl.SyntheticResponseTimeDistributionGraphConsumer#stopProducing(): syntheticResponseTimeDistribution produced 0 samples
-2023-10-10 21:37:31,599 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.graph.impl.BytesThroughputGraphConsumer#stopProducing(): bytesThroughputOverTime produced 0 samples
-2023-10-10 21:37:31,599 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.graph.impl.CodesPerSecondGraphConsumer#stopProducing(): codesPerSecond produced 0 samples
-2023-10-10 21:37:31,739 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.graph.impl.ResponseTimeVSRequestGraphConsumer#stopProducing(): responseTimeVsRequest produced 0 samples
-2023-10-10 21:37:31,741 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.FilterConsumer#stopProducing(): startIntervalControlerFilter produced 74900 samples
-2023-10-10 21:37:31,741 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.graph.impl.TotalTPSGraphConsumer#stopProducing(): totalTPS produced 0 samples
-2023-10-10 21:37:31,741 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.graph.impl.ActiveThreadsGraphConsumer#stopProducing(): activeThreadsOverTime produced 0 samples
-2023-10-10 21:37:31,741 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.graph.impl.TimeVSThreadGraphConsumer#stopProducing(): timeVsThreads produced 0 samples
-2023-10-10 21:37:31,747 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.graph.impl.ResponseTimeDistributionGraphConsumer#stopProducing(): responseTimeDistribution produced 0 samples
-2023-10-10 21:37:31,749 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.graph.impl.TransactionsPerSecondGraphConsumer#stopProducing(): transactionsPerSecond produced 0 samples
-2023-10-10 21:37:31,753 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.graph.impl.ResponseTimePercentilesGraphConsumer#stopProducing(): responseTimePercentiles produced 0 samples
-2023-10-10 21:37:31,781 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.graph.impl.ResponseTimePercentilesOverTimeGraphConsumer#stopProducing(): responseTimePercentilesOverTime produced 0 samples
-2023-10-10 21:37:31,783 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.graph.impl.ResponseTimeOverTimeGraphConsumer#stopProducing(): responseTimesOverTime produced 0 samples
-2023-10-10 21:37:31,784 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.graph.impl.ConnectTimeOverTimeGraphConsumer#stopProducing(): connectTimeOverTime produced 0 samples
-2023-10-10 21:37:31,785 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.graph.impl.LatencyOverTimeGraphConsumer#stopProducing(): latenciesOverTime produced 0 samples
-2023-10-10 21:37:31,786 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.FilterConsumer#stopProducing(): nameFilter produced 160500 samples
-2023-10-10 21:37:31,786 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.FilterConsumer#stopProducing(): dateRangeFilter produced 32100 samples
-2023-10-10 21:37:31,786 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.NormalizerSampleConsumer#stopProducing(): normalizer produced 10700 samples
-2023-10-10 21:37:31,786 INFO o.a.j.r.p.CsvFileSampleSource: produce(): 10700 samples produced in 968ms on channel 0
-2023-10-10 21:37:31,786 INFO o.a.j.r.d.ReportGenerator: Exporting data using exporter:'json' of className:'org.apache.jmeter.report.dashboard.JsonExporter'
-2023-10-10 21:37:31,994 INFO o.a.j.r.d.JsonExporter: Found data for consumer statisticsSummary in context
-2023-10-10 21:37:31,994 INFO o.a.j.r.d.JsonExporter: Creating statistics for overall
-2023-10-10 21:37:31,995 INFO o.a.j.r.d.JsonExporter: Creating statistics for other transactions
-2023-10-10 21:37:31,996 INFO o.a.j.r.d.JsonExporter: Checking output folder
-2023-10-10 21:37:31,997 INFO o.a.j.r.d.JsonExporter: Writing statistics JSON to /Users/ncastellanos/porvenir-ecommerce/docs/report_20231010213434/statistics.json
-2023-10-10 21:37:32,071 INFO o.a.j.r.d.ReportGenerator: Exporting data using exporter:'html' of className:'org.apache.jmeter.report.dashboard.HtmlTemplateExporter'
-2023-10-10 21:37:32,075 INFO o.a.j.r.d.HtmlTemplateExporter: Will generate dashboard in folder: /Users/ncastellanos/porvenir-ecommerce/docs/report_20231010213434
-2023-10-10 21:37:32,324 INFO o.a.j.r.d.HtmlTemplateExporter: Report will be generated in: /Users/ncastellanos/porvenir-ecommerce/docs/report_20231010213434, creating folder structure
-2023-10-10 21:37:32,327 INFO o.a.j.r.d.TemplateVisitor: Copying folder from '/usr/local/Cellar/jmeter/5.6.2/libexec/bin/report-template' to '/Users/ncastellanos/porvenir-ecommerce/docs/report_20231010213434', got message: /Users/ncastellanos/porvenir-ecommerce/docs/report_20231010213434, found non empty folder with following content [/Users/ncastellanos/porvenir-ecommerce/docs/report_20231010213434/statistics.json], will be ignored
-2023-10-10 21:37:32,701 INFO o.a.j.JMeter: Dashboard generated
+2023-10-10 22:23:19,398 INFO o.a.j.u.JMeterUtils: Setting Locale to en_EN
+2023-10-10 22:23:19,429 INFO o.a.j.JMeter: Loading user properties from: /usr/local/Cellar/jmeter/5.6.2/libexec/bin/user.properties
+2023-10-10 22:23:19,431 INFO o.a.j.JMeter: Loading system properties from: /usr/local/Cellar/jmeter/5.6.2/libexec/bin/system.properties
+2023-10-10 22:23:19,440 INFO o.a.j.JMeter: Copyright (c) 1998-2023 The Apache Software Foundation
+2023-10-10 22:23:19,440 INFO o.a.j.JMeter: Version 5.6.2
+2023-10-10 22:23:19,440 INFO o.a.j.JMeter: java.version=17.0.8.1
+2023-10-10 22:23:19,440 INFO o.a.j.JMeter: java.vm.name=OpenJDK 64-Bit Server VM
+2023-10-10 22:23:19,441 INFO o.a.j.JMeter: os.name=Mac OS X
+2023-10-10 22:23:19,441 INFO o.a.j.JMeter: os.arch=x86_64
+2023-10-10 22:23:19,441 INFO o.a.j.JMeter: os.version=13.1
+2023-10-10 22:23:19,441 INFO o.a.j.JMeter: file.encoding=UTF-8
+2023-10-10 22:23:19,441 INFO o.a.j.JMeter: java.awt.headless=true
+2023-10-10 22:23:19,441 INFO o.a.j.JMeter: Max memory     =1073741824
+2023-10-10 22:23:19,441 INFO o.a.j.JMeter: Available Processors =12
+2023-10-10 22:23:19,451 INFO o.a.j.JMeter: Default Locale=English (EN)
+2023-10-10 22:23:19,452 INFO o.a.j.JMeter: JMeter  Locale=English (EN)
+2023-10-10 22:23:19,452 INFO o.a.j.JMeter: JMeterHome=/usr/local/Cellar/jmeter/5.6.2/libexec
+2023-10-10 22:23:19,452 INFO o.a.j.JMeter: user.dir  =/Users/ncastellanos/porvenir-ecommerce
+2023-10-10 22:23:19,452 INFO o.a.j.JMeter: PWD       =/Users/ncastellanos/porvenir-ecommerce
+2023-10-10 22:23:19,453 INFO o.a.j.JMeter: IP: 192.168.1.34 Name: CO0C02FQD20MD6M FullName: 192.168.1.34
+2023-10-10 22:23:19,468 INFO o.a.j.JMeter: Setting property 'jmeter.reportgenerator.outputdir' to:'/Users/ncastellanos/porvenir-ecommerce/docs/report_20231010222318'
+2023-10-10 22:23:19,471 INFO o.a.j.s.FileServer: Default base='/Users/ncastellanos/porvenir-ecommerce'
+2023-10-10 22:23:19,473 INFO o.a.j.s.FileServer: Set new base='/Users/ncastellanos/porvenir-ecommerce/docs'
+2023-10-10 22:23:19,701 INFO o.a.j.s.SaveService: Testplan (JMX) version: 2.2. Testlog (JTL) version: 2.2
+2023-10-10 22:23:19,730 INFO o.a.j.s.SaveService: Using SaveService properties version 5.0
+2023-10-10 22:23:19,733 INFO o.a.j.s.SaveService: Using SaveService properties file encoding UTF-8
+2023-10-10 22:23:19,736 INFO o.a.j.s.SaveService: Loading file: docs/loadtest.jmx
+2023-10-10 22:23:19,795 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/html is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
+2023-10-10 22:23:19,795 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for application/xhtml+xml is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
+2023-10-10 22:23:19,795 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for application/xml is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
+2023-10-10 22:23:19,796 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/xml is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
+2023-10-10 22:23:19,796 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/vnd.wap.wml is org.apache.jmeter.protocol.http.parser.RegexpHTMLParser
+2023-10-10 22:23:19,796 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/css is org.apache.jmeter.protocol.http.parser.CssParser
+2023-10-10 22:23:20,125 INFO o.a.j.e.KeyToolUtils: keytool found at 'keytool'
+2023-10-10 22:23:20,126 INFO o.a.j.p.h.p.ProxyControl: HTTP(S) Test Script Recorder SSL Proxy will use keys that support embedded 3rd party resources in file /usr/local/Cellar/jmeter/5.6.2/libexec/bin/proxyserver.jks
+2023-10-10 22:23:20,161 INFO o.a.j.JMeter: Creating summariser <summary>
+2023-10-10 22:23:20,165 INFO o.a.j.r.d.ReportGenerator: ReportGenerator will use for Parsing the separator: ','
+2023-10-10 22:23:20,166 INFO o.a.j.r.d.ReportGenerator: Will generate report at end of test from  results file: docs/log_20231010222318.jtl
+2023-10-10 22:23:20,166 INFO o.a.j.r.d.ReportGenerator: Reading report generator properties from: /usr/local/Cellar/jmeter/5.6.2/libexec/bin/reportgenerator.properties
+2023-10-10 22:23:20,166 INFO o.a.j.r.d.ReportGenerator: Merging with JMeter properties
+2023-10-10 22:23:20,171 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.temp_dir' not found, using default value 'temp' instead.
+2023-10-10 22:23:20,173 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.apdex_per_transaction' not found, using default value 'null' instead.
+2023-10-10 22:23:20,174 INFO o.a.j.r.c.ReportGeneratorConfiguration: apdex_per_transaction is empty, not APDEX per transaction customization
+2023-10-10 22:23:20,174 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.sample_filter' not found, using default value 'null' instead.
+2023-10-10 22:23:20,174 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.report_title' not found, using default value 'null' instead.
+2023-10-10 22:23:20,174 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.start_date' not found, using default value 'null' instead.
+2023-10-10 22:23:20,174 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.end_date' not found, using default value 'null' instead.
+2023-10-10 22:23:20,174 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.date_format' not found, using default value 'null' instead.
+2023-10-10 22:23:20,175 INFO o.a.j.r.c.ReportGeneratorConfiguration: Will use date range start date: null, end date: null
+2023-10-10 22:23:20,179 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.graph.totalTPS.exclude_controllers' not found, using default value 'false' instead.
+2023-10-10 22:23:20,179 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.graph.activeThreadsOverTime.exclude_controllers' not found, using default value 'false' instead.
+2023-10-10 22:23:20,179 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.graph.timeVsThreads.exclude_controllers' not found, using default value 'false' instead.
+2023-10-10 22:23:20,179 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.graph.responseTimeDistribution.exclude_controllers' not found, using default value 'false' instead.
+2023-10-10 22:23:20,179 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.graph.transactionsPerSecond.exclude_controllers' not found, using default value 'false' instead.
+2023-10-10 22:23:20,180 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.graph.responseTimePercentiles.exclude_controllers' not found, using default value 'false' instead.
+2023-10-10 22:23:20,180 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.graph.responseTimePercentilesOverTime.exclude_controllers' not found, using default value 'false' instead.
+2023-10-10 22:23:20,180 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.graph.responseTimesOverTime.exclude_controllers' not found, using default value 'false' instead.
+2023-10-10 22:23:20,180 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.graph.connectTimeOverTime.exclude_controllers' not found, using default value 'false' instead.
+2023-10-10 22:23:20,180 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.graph.latenciesOverTime.exclude_controllers' not found, using default value 'false' instead.
+2023-10-10 22:23:20,181 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.exporter.json.filters_only_sample_series' not found, using default value 'true' instead.
+2023-10-10 22:23:20,181 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.exporter.json.series_filter' not found, using default value '' instead.
+2023-10-10 22:23:20,182 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.exporter.json.show_controllers_only' not found, using default value 'false' instead.
+2023-10-10 22:23:20,182 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.exporter.html.filters_only_sample_series' not found, using default value 'true' instead.
+2023-10-10 22:23:20,182 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.exporter.html.series_filter' not found, using default value '' instead.
+2023-10-10 22:23:20,182 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.exporter.html.show_controllers_only' not found, using default value 'false' instead.
+2023-10-10 22:23:20,195 INFO o.a.j.e.StandardJMeterEngine: Running the test!
+2023-10-10 22:23:20,196 INFO o.a.j.s.SampleEvent: List of sample_variables: []
+2023-10-10 22:23:20,196 INFO o.a.j.s.SampleEvent: List of sample_variables: []
+2023-10-10 22:23:20,201 INFO o.a.j.e.u.CompoundVariable: Note: Function class names must contain the string: '.functions.'
+2023-10-10 22:23:20,201 INFO o.a.j.e.u.CompoundVariable: Note: Function class names must not contain the string: '.gui.'
+2023-10-10 22:23:20,271 INFO o.a.j.r.ClassFinder: Will scan jar /usr/local/Cellar/jmeter/5.6.2/libexec/lib/ext/jmeter-plugins-manager-1.10.jar with filter ExtendsClassFilter [parents=[interface org.apache.jmeter.functions.Function], inner=false, contains=null, notContains=null]. Consider exposing JMeter plugins via META-INF/services, and add JMeter-Skip-Class-Scanning=true manifest attribute so JMeter can skip classfile scanning
+2023-10-10 22:23:20,399 INFO o.a.j.JMeter: Running test (1696994600399)
+2023-10-10 22:23:20,427 INFO o.a.j.e.StandardJMeterEngine: Starting ThreadGroup: 1 : Thread Group
+2023-10-10 22:23:20,428 INFO o.a.j.e.StandardJMeterEngine: Starting 1 threads for group Thread Group.
+2023-10-10 22:23:20,428 INFO o.a.j.e.StandardJMeterEngine: Thread will continue on error
+2023-10-10 22:23:20,428 INFO o.a.j.t.ThreadGroup: Starting thread group... number=1 threads=1 ramp-up=3 delayedStart=true
+2023-10-10 22:23:20,429 INFO o.a.j.t.ThreadGroup: Started thread group number 1
+2023-10-10 22:23:20,429 INFO o.a.j.e.StandardJMeterEngine: All thread groups have been started
+2023-10-10 22:23:20,463 INFO o.a.j.t.JMeterThread: Thread started: Thread Group 1-1
+2023-10-10 22:23:20,486 INFO o.a.j.p.h.s.HTTPHCAbstractImpl: Local host = CO0C02FQD20MD6M
+2023-10-10 22:23:20,496 INFO o.a.j.p.h.s.HTTPHC4Impl: HTTP request retry count = 0
+2023-10-10 22:23:20,497 INFO o.a.j.s.SampleResult: Note: Sample TimeStamps are START times
+2023-10-10 22:23:20,497 INFO o.a.j.s.SampleResult: sampleresult.default.encoding is set to UTF-8
+2023-10-10 22:23:20,498 INFO o.a.j.s.SampleResult: sampleresult.useNanoTime=true
+2023-10-10 22:23:20,498 INFO o.a.j.s.SampleResult: sampleresult.nanoThreadSleep=5000
+2023-10-10 22:23:20,594 INFO o.a.j.p.h.s.h.LazyLayeredConnectionSocketFactory: Setting up HTTPS TrustAll Socket Factory
+2023-10-10 22:23:20,599 INFO o.a.j.u.JsseSSLManager: Using default SSL protocol: TLS
+2023-10-10 22:23:20,599 INFO o.a.j.u.JsseSSLManager: SSL session context: per-thread
+2023-10-10 22:23:20,757 INFO o.a.j.u.SSLManager: JmeterKeyStore Location:  type JKS
+2023-10-10 22:23:20,760 INFO o.a.j.u.SSLManager: KeyStore created OK
+2023-10-10 22:23:20,761 WARN o.a.j.u.SSLManager: Keystore file not found, loading empty keystore
+2023-10-10 22:23:32,463 INFO o.a.j.r.Summariser: summary +      5 in 00:00:12 =    0.4/s Avg:   349 Min:   194 Max:   738 Err:     0 (0.00%) Active: 1 Started: 1 Finished: 0
+2023-10-10 22:24:00,166 INFO o.a.j.r.Summariser: summary +     10 in 00:00:28 =    0.4/s Avg:   211 Min:   173 Max:   237 Err:     0 (0.00%) Active: 1 Started: 1 Finished: 0
+2023-10-10 22:24:00,167 INFO o.a.j.r.Summariser: summary =     15 in 00:00:40 =    0.4/s Avg:   257 Min:   173 Max:   738 Err:     0 (0.00%)
+2023-10-10 22:24:30,472 INFO o.a.j.r.Summariser: summary +     11 in 00:00:30 =    0.4/s Avg:   211 Min:   101 Max:   469 Err:     0 (0.00%) Active: 1 Started: 1 Finished: 0
+2023-10-10 22:24:30,472 INFO o.a.j.r.Summariser: summary =     26 in 00:01:10 =    0.4/s Avg:   237 Min:   101 Max:   738 Err:     0 (0.00%)
+2023-10-10 22:25:00,879 INFO o.a.j.r.Summariser: summary +     11 in 00:00:30 =    0.4/s Avg:   203 Min:   104 Max:   447 Err:     0 (0.00%) Active: 1 Started: 1 Finished: 0
+2023-10-10 22:25:00,879 INFO o.a.j.r.Summariser: summary =     37 in 00:01:40 =    0.4/s Avg:   227 Min:   101 Max:   738 Err:     0 (0.00%)
+2023-10-10 22:25:30,653 INFO o.a.j.r.Summariser: summary +     11 in 00:00:30 =    0.4/s Avg:   154 Min:   105 Max:   302 Err:     0 (0.00%) Active: 1 Started: 1 Finished: 0
+2023-10-10 22:25:30,654 INFO o.a.j.r.Summariser: summary =     48 in 00:02:10 =    0.4/s Avg:   210 Min:   101 Max:   738 Err:     0 (0.00%)
+2023-10-10 22:26:01,353 INFO o.a.j.r.Summariser: summary +     11 in 00:00:31 =    0.4/s Avg:   232 Min:   109 Max:   518 Err:     0 (0.00%) Active: 1 Started: 1 Finished: 0
+2023-10-10 22:26:01,354 INFO o.a.j.r.Summariser: summary =     59 in 00:02:41 =    0.4/s Avg:   214 Min:   101 Max:   738 Err:     0 (0.00%)
+2023-10-10 22:26:30,894 INFO o.a.j.r.Summariser: summary +     11 in 00:00:30 =    0.4/s Avg:   141 Min:   106 Max:   220 Err:     0 (0.00%) Active: 1 Started: 1 Finished: 0
+2023-10-10 22:26:30,895 INFO o.a.j.r.Summariser: summary =     70 in 00:03:10 =    0.4/s Avg:   203 Min:   101 Max:   738 Err:     0 (0.00%)
+2023-10-10 22:27:01,302 INFO o.a.j.r.Summariser: summary +     11 in 00:00:30 =    0.4/s Avg:   207 Min:   107 Max:   446 Err:     0 (0.00%) Active: 1 Started: 1 Finished: 0
+2023-10-10 22:27:01,303 INFO o.a.j.r.Summariser: summary =     81 in 00:03:41 =    0.4/s Avg:   203 Min:   101 Max:   738 Err:     0 (0.00%)
+2023-10-10 22:27:30,024 INFO o.a.j.r.Summariser: summary +     10 in 00:00:29 =    0.3/s Avg:   293 Min:   102 Max:   804 Err:     0 (0.00%) Active: 1 Started: 1 Finished: 0
+2023-10-10 22:27:30,025 INFO o.a.j.r.Summariser: summary =     91 in 00:04:10 =    0.4/s Avg:   213 Min:   101 Max:   804 Err:     0 (0.00%)
+2023-10-10 22:28:00,126 INFO o.a.j.r.Summariser: summary +     11 in 00:00:30 =    0.4/s Avg:   181 Min:   140 Max:   229 Err:     0 (0.00%) Active: 1 Started: 1 Finished: 0
+2023-10-10 22:28:00,127 INFO o.a.j.r.Summariser: summary =    102 in 00:04:40 =    0.4/s Avg:   210 Min:   101 Max:   804 Err:     0 (0.00%)
+2023-10-10 22:28:16,496 INFO o.a.j.t.JMeterThread: Thread is done: Thread Group 1-1
+2023-10-10 22:28:16,497 INFO o.a.j.t.JMeterThread: Thread finished: Thread Group 1-1
+2023-10-10 22:28:16,499 INFO o.a.j.e.StandardJMeterEngine: Notifying test listeners of end of test
+2023-10-10 22:28:16,500 INFO o.a.j.r.Summariser: summary +      5 in 00:00:16 =    0.3/s Avg:   206 Min:   120 Max:   376 Err:     0 (0.00%) Active: 0 Started: 1 Finished: 1
+2023-10-10 22:28:16,501 INFO o.a.j.r.Summariser: summary =    107 in 00:04:56 =    0.4/s Avg:   209 Min:   101 Max:   804 Err:     0 (0.00%)
+2023-10-10 22:28:16,501 INFO o.a.j.JMeter: Generating Dashboard
+2023-10-10 22:28:16,501 INFO o.a.j.r.d.ReportGenerator: Flushing result collector before report Generation
+2023-10-10 22:28:16,512 INFO o.a.j.r.p.NormalizerSampleConsumer: Using format, 'ms', to parse timeStamp field
+2023-10-10 22:28:16,595 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.AggregateConsumer#stopProducing(): beginDate produced 0 samples
+2023-10-10 22:28:16,595 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.AggregateConsumer#stopProducing(): endDate produced 0 samples
+2023-10-10 22:28:16,598 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.ApdexSummaryConsumer#stopProducing(): apdexSummary produced 0 samples
+2023-10-10 22:28:16,598 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.RequestsSummaryConsumer#stopProducing(): requestsSummary produced 0 samples
+2023-10-10 22:28:16,603 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.StatisticsSummaryConsumer#stopProducing(): statisticsSummary produced 0 samples
+2023-10-10 22:28:16,605 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.Top5ErrorsBySamplerConsumer#stopProducing(): top5ErrorsBySampler produced 0 samples
+2023-10-10 22:28:16,605 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.ErrorsSummaryConsumer#stopProducing(): errorsSummary produced 0 samples
+2023-10-10 22:28:16,605 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.graph.impl.HitsPerSecondGraphConsumer#stopProducing(): hitsPerSecond produced 0 samples
+2023-10-10 22:28:16,624 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.graph.impl.LatencyVSRequestGraphConsumer#stopProducing(): latencyVsRequest produced 0 samples
+2023-10-10 22:28:16,625 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.graph.impl.SyntheticResponseTimeDistributionGraphConsumer#stopProducing(): syntheticResponseTimeDistribution produced 0 samples
+2023-10-10 22:28:16,625 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.graph.impl.BytesThroughputGraphConsumer#stopProducing(): bytesThroughputOverTime produced 0 samples
+2023-10-10 22:28:16,625 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.graph.impl.CodesPerSecondGraphConsumer#stopProducing(): codesPerSecond produced 0 samples
+2023-10-10 22:28:16,632 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.graph.impl.ResponseTimeVSRequestGraphConsumer#stopProducing(): responseTimeVsRequest produced 0 samples
+2023-10-10 22:28:16,633 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.FilterConsumer#stopProducing(): startIntervalControlerFilter produced 749 samples
+2023-10-10 22:28:16,633 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.graph.impl.TotalTPSGraphConsumer#stopProducing(): totalTPS produced 0 samples
+2023-10-10 22:28:16,633 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.graph.impl.ActiveThreadsGraphConsumer#stopProducing(): activeThreadsOverTime produced 0 samples
+2023-10-10 22:28:16,633 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.graph.impl.TimeVSThreadGraphConsumer#stopProducing(): timeVsThreads produced 0 samples
+2023-10-10 22:28:16,638 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.graph.impl.ResponseTimeDistributionGraphConsumer#stopProducing(): responseTimeDistribution produced 0 samples
+2023-10-10 22:28:16,640 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.graph.impl.TransactionsPerSecondGraphConsumer#stopProducing(): transactionsPerSecond produced 0 samples
+2023-10-10 22:28:16,641 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.graph.impl.ResponseTimePercentilesGraphConsumer#stopProducing(): responseTimePercentiles produced 0 samples
+2023-10-10 22:28:16,664 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.graph.impl.ResponseTimePercentilesOverTimeGraphConsumer#stopProducing(): responseTimePercentilesOverTime produced 0 samples
+2023-10-10 22:28:16,664 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.graph.impl.ResponseTimeOverTimeGraphConsumer#stopProducing(): responseTimesOverTime produced 0 samples
+2023-10-10 22:28:16,665 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.graph.impl.ConnectTimeOverTimeGraphConsumer#stopProducing(): connectTimeOverTime produced 0 samples
+2023-10-10 22:28:16,666 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.graph.impl.LatencyOverTimeGraphConsumer#stopProducing(): latenciesOverTime produced 0 samples
+2023-10-10 22:28:16,666 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.FilterConsumer#stopProducing(): nameFilter produced 1605 samples
+2023-10-10 22:28:16,666 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.FilterConsumer#stopProducing(): dateRangeFilter produced 321 samples
+2023-10-10 22:28:16,666 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.NormalizerSampleConsumer#stopProducing(): normalizer produced 107 samples
+2023-10-10 22:28:16,667 INFO o.a.j.r.p.CsvFileSampleSource: produce(): 107 samples produced in 130ms on channel 0
+2023-10-10 22:28:16,667 INFO o.a.j.r.d.ReportGenerator: Exporting data using exporter:'json' of className:'org.apache.jmeter.report.dashboard.JsonExporter'
+2023-10-10 22:28:16,801 INFO o.a.j.r.d.JsonExporter: Found data for consumer statisticsSummary in context
+2023-10-10 22:28:16,801 INFO o.a.j.r.d.JsonExporter: Creating statistics for overall
+2023-10-10 22:28:16,802 INFO o.a.j.r.d.JsonExporter: Creating statistics for other transactions
+2023-10-10 22:28:16,803 INFO o.a.j.r.d.JsonExporter: Checking output folder
+2023-10-10 22:28:16,803 INFO o.a.j.r.d.JsonExporter: Writing statistics JSON to /Users/ncastellanos/porvenir-ecommerce/docs/report_20231010222318/statistics.json
+2023-10-10 22:28:16,856 INFO o.a.j.r.d.ReportGenerator: Exporting data using exporter:'html' of className:'org.apache.jmeter.report.dashboard.HtmlTemplateExporter'
+2023-10-10 22:28:16,858 INFO o.a.j.r.d.HtmlTemplateExporter: Will generate dashboard in folder: /Users/ncastellanos/porvenir-ecommerce/docs/report_20231010222318
+2023-10-10 22:28:17,085 INFO o.a.j.r.d.HtmlTemplateExporter: Report will be generated in: /Users/ncastellanos/porvenir-ecommerce/docs/report_20231010222318, creating folder structure
+2023-10-10 22:28:17,087 INFO o.a.j.r.d.TemplateVisitor: Copying folder from '/usr/local/Cellar/jmeter/5.6.2/libexec/bin/report-template' to '/Users/ncastellanos/porvenir-ecommerce/docs/report_20231010222318', got message: /Users/ncastellanos/porvenir-ecommerce/docs/report_20231010222318, found non empty folder with following content [/Users/ncastellanos/porvenir-ecommerce/docs/report_20231010222318/statistics.json], will be ignored
+2023-10-10 22:28:17,419 INFO o.a.j.JMeter: Dashboard generated
